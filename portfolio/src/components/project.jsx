@@ -1,6 +1,6 @@
 import { Container, Grid, SimpleGrid, Skeleton } from '@mantine/core';
 import { Card, Title, Text, List, ThemeIcon, Badge, Stack, Group, Button } from '@mantine/core';
-import { IconCircleCheck, IconCode } from '@tabler/icons-react';
+import { IconRosetteDiscountCheck, IconCode } from '@tabler/icons-react';
 import classes from './css/UserInfoIcons.module.css'
 
 export function Project(props) {
@@ -37,17 +37,19 @@ export function ProjectCard(props) {
         </Text>
         {props.data.github ? <Button mt={-10} size="xs" w={100} variant="default" leftSection={<IconCode size={18}/>} onClick={()=>handleClick(props.data.github)}>github</Button>:<></>}
 
-        
+        <Text>Responsibilities and Achievements:</Text>
 
         <List
-          spacing="xs"
-          size="sm"
-          mt="md"
+          spacing="md"
+          size="md"
+          
           icon={
-            <ThemeIcon color="teal" size={18} radius="xl">
-              <IconCircleCheck size={14} />
+            <ThemeIcon color="teal" size={20} >
+              <IconRosetteDiscountCheck  />
             </ThemeIcon>
           }
+
+          
         >
           {props.data.achievements.map((value, index) => (
             <List.Item key={index} >{value}</List.Item>
