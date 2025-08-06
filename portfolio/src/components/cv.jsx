@@ -3,7 +3,7 @@ import { UserInfoIcons, Description, Degree} from './user';
 import { Container, Grid, Divider } from '@mantine/core';
 import { Project } from './project';
 import classes from './css/UserInfoIcons.module.css'
-import {projects} from '../assets/static_data'
+import {projects, description} from '../assets/static_data'
 
 export function CV() {
     
@@ -19,15 +19,7 @@ export function CV() {
     const email = 'itsmasoudkarimi@gmail.com' 
     const location = 'Turin, Italy'
 
-
-    // description
-    const description = [
-        {'id':0, 'info':"An Applied AI Researcher with extensive experience developing novel solutions in generative AI and computer vision. Key accomplishments include engineering a pipeline to create semantic segmentation datasets by extracting masks from the internal attention of generative models and using Vision-Language Models (VLMs) with prompt engineering to synthetically caption unlabeled images. Further expertise includes developing specialized classifiers for Out-of-Distribution (OOD) detection via supervised contrastive learning, fine-tuning foundational models using parameter-efficient methods, and tackling extreme data imbalance with curriculum learning and custom batch sampling."},
-        {'id':1, 'info':"In addition to core modeling, experienced in building and deploying end-to-end AI systems. Designed and implemented a series of local, privacy-focused ReAct agents with tool-calling capabilities, stateful long-term memory, and enhanced performance through Chain of Thought (CoT) and few-shot prompting. Possesses full-stack development skills, having built both the backend agent framework using LangGraph and LangChain and the associated front-end interface."},
-
-    ]
-
-
+    
 
   const data = [
             {'info':'Built using GPT-4 and LangChain', 'id':0},

@@ -48,8 +48,8 @@ export function Description(props){
         <Grid >
             <Grid.Col >
                 {
-                    props.description.map((desc)=>
-                        <SubDescription desc={desc.info} key={desc.id} id={desc.id} />
+                    props.description.map((desc, index)=>
+                        <SubDescription desc={desc} key={index} id={index} />
                     )
                 }
             </Grid.Col>

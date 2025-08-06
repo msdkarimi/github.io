@@ -1,6 +1,6 @@
 import { Container, Grid, SimpleGrid, Skeleton } from '@mantine/core';
 import { Card, Title, Text, List, ThemeIcon, Badge, Stack, Group, Button } from '@mantine/core';
-import { IconRosetteDiscountCheck, IconCode } from '@tabler/icons-react';
+import { IconRosetteDiscountCheckFilled, IconCode } from '@tabler/icons-react';
 import classes from './css/UserInfoIcons.module.css'
 
 export function Project(props) {
@@ -30,7 +30,7 @@ export function ProjectCard(props) {
   return (
     
       <Stack spacing="xs" >
-        <Title order={3} className={classes.shadow} >{props.data.title}</Title>
+        <Title order={3} className={classes.shadow} color='white'>{props.data.title}</Title>
         
         <Text size="sm" c="dimmed" mt={-15} >
           at <strong>{props.data.company}, {props.data.location}</strong>
@@ -43,22 +43,16 @@ export function ProjectCard(props) {
           spacing="md"
           size="md"
           
-          icon={
-            <ThemeIcon color="teal" size={20} >
-              <IconRosetteDiscountCheck  />
-            </ThemeIcon>
-          }
-
-          
+          icon={<IconRosetteDiscountCheckFilled color='green' size={30} />}
         >
           {props.data.achievements.map((value, index) => (
-            <List.Item key={index} >{value}</List.Item>
+            <List.Item key={index} style={{ textAlign: 'justify' }} >{value}</List.Item>
           ))}
         </List>
-
-        <Group>
+        <Text>Technology Stack:</Text>
+        <Group gap='xs'>
             {
-                props.data.stack.map((value, index)=>(<Badge key={index} variant="light" color="blue" radius="sm" >{value}</Badge>))
+                props.data.stack.map((value, index)=>(<Badge className={classes.shadow} key={index} variant="light" color="blue" radius="sm" >{value}</Badge>))
             }
         </Group>
         
