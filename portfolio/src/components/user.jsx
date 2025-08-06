@@ -19,22 +19,22 @@ export function UserInfoIcons(props) {
         <Grid.Col span={{ base: 12, xs: 4 }} mt={20}>
             <Group>
                 <div>
-                <Text fz="lg" tt="uppercase" fw={700} c='white' className={classes.shadow}  >
+                <Text fz="lg" tt="uppercase" fw={700} c='white' className={classes.shadow_t}  >
                     {props.title}
                 </Text>
 
-                <Text fz="xl" fw={500} className={`${classes.name} ${classes.shadow}`}  c='white'>
+                <Text fz="xl" fw={500} className={`${classes.name} ${classes.shadow_t}`}  c='white'>
                     {props.fullName}
                 </Text>
                 <Group wrap="nowrap" gap={10} mt={3}>
-                    <IconAt stroke={1.5} size={25} className={classes.icon} />
-                    <Text fz="lg" c="white">
+                    <IconAt stroke={1.5} size={25} className={classes.icon } />
+                    <Text fz="lg" c="white" className={classes.shadow}>
                     {props.email}
                     </Text>
                 </Group>
                 <Group wrap="nowrap" gap={10} mt={3}>
                     <IconMapPin stroke={1.5} size={25} className={classes.icon} />
-                    <Text fz="lg" c="white">{props.location}</Text>
+                    <Text fz="lg" c="white" className={classes.shadow}>{props.location}</Text>
                 </Group>
                 </div>
             </Group>
@@ -74,12 +74,12 @@ export function Description(props){
 
 export function Degree(props){
     return(
-        <Grid >
+        <Grid className={classes.shadow} >
             <Grid.Col >
                <Paper mt={10}>
                     <Stack>
                         <Group>
-                            <IconCertificate size={45}/>
+                            <IconCertificate size={50}/>
                             <div>
                                 <Text size="xl" fw={700}>
                                     {props.degreeName}

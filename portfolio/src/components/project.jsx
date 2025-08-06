@@ -1,6 +1,7 @@
 import { Container, Grid, SimpleGrid, Skeleton } from '@mantine/core';
 import { Card, Title, Text, List, ThemeIcon, Badge, Stack } from '@mantine/core';
 import { IconCircleCheck } from '@tabler/icons-react';
+import classes from './css/UserInfoIcons.module.css'
 
 export function Project(props) {
   const child = <Skeleton height={140} radius="md" animate={true} />;
@@ -24,8 +25,8 @@ export function ProjectCard(props) {
     console.log(props.descriptionPoints)
   return (
     
-      <Stack spacing="xs">
-        <Title order={3}>{props.title}</Title>
+      <Stack spacing="xs" >
+        <Title order={3} className={classes.shadow} >{props.title}</Title>
         
         <Text size="sm" c="dimmed">
           by <strong>{props.name}</strong>
