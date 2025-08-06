@@ -6,12 +6,12 @@ import classes from './css/UserInfoIcons.module.css'
 export function UserInfoIcons() {
     const child = <Skeleton height={140} radius="md" animate={true} />;
   return (
-    <Grid>
+    <Grid mt={10}>
         <Grid.Col span={{ base: 12, xs: 6 }}>
-            <Group wrap="nowrap" mt={10}>
+            <Group>
                 <Avatar
                 src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png"
-                size={150}
+                size={250}
                 radius="md"
                 />
                 <div>
