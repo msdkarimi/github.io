@@ -19,7 +19,7 @@ export function UserInfoIcons(props) {
         <Grid.Col span={{ base: 12, xs: 9 }} mt={20}>
             <Group>
                 <div>
-                <Text fz="xl" fw={700} className={`${classes.name} ${classes.shadow_t}`}  c='white'>
+                <Text fz="xl" fw={700} className={`${classes.name} ${classes.shadow_t}`}  c='white' tt='uppercase'>
                     {props.fullName}
                 </Text>
                 <Text fz="lg" tt="uppercase" fw={700} c='white' className={classes.shadow_t}  >

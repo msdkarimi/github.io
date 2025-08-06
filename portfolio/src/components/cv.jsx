@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { UserInfoIcons, Description, Degree} from './user';
 import { Container, Grid, Divider } from '@mantine/core';
 import { Project } from './project';
+import classes from './css/UserInfoIcons.module.css'
 
 export function CV() {
     
@@ -13,7 +14,7 @@ export function CV() {
 
     // info
     const fullName = 'Masoud Karimi'
-    const title = 'AI Engineer'
+    const title = 'Applied AI Engineer'
     const email = 'itsmasoudkarimi@gmail.com' 
     const location = 'Turin, Italy'
 
