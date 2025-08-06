@@ -7,7 +7,7 @@ import { MantineProvider } from '@mantine/core';
 
 export default function App() {
   return <MantineProvider>
-    <Demo/>
+    <CV/>
   </MantineProvider>;
 }
 
@@ -15,10 +15,10 @@ export default function App() {
 
 
 
-function Demo() {
-  const [active, setActive] = useState(1);
-  const nextStep = () => setActive((current) => (current < 3 ? current + 1 : current));
-  const prevStep = () => setActive((current) => (current > 0 ? current - 1 : current));
+function CV() {
+  useEffect(() => {
+    document.title = 'Masoud Karimi - ML Engineer';
+  }, []);
 
   return (
    <>
