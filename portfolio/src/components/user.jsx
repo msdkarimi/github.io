@@ -19,11 +19,11 @@ export function UserInfoIcons(props) {
         <Grid.Col span={{ base: 12, xs: 4 }} mt={20}>
             <Group>
                 <div>
-                <Text fz="lg" tt="uppercase" fw={700} c='white'  >
+                <Text fz="lg" tt="uppercase" fw={700} c='white' className={classes.shadow}  >
                     {props.title}
                 </Text>
 
-                <Text fz="xl" fw={500} className={classes.name} c='white'>
+                <Text fz="xl" fw={500} className={`${classes.name} ${classes.shadow}`}  c='white'>
                     {props.fullName}
                 </Text>
                 <Group wrap="nowrap" gap={10} mt={3}>
