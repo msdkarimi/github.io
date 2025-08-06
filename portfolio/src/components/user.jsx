@@ -3,7 +3,7 @@ import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack } from '@mantine/core
 // import classes from './UserInfoIcons.module.css';
 import classes from './css/UserInfoIcons.module.css'
 
-export function UserInfoIcons() {
+export function UserInfoIcons(props) {
     const child = <Skeleton radius="md" animate={true} />;
   return (
     <Grid mt={10}>
@@ -20,21 +20,21 @@ export function UserInfoIcons() {
             <Group>
                 <div>
                 <Text fz="lg" tt="uppercase" fw={700} c='white'  >
-                    AI Engineer
+                    {props.title}
                 </Text>
 
                 <Text fz="xl" fw={500} className={classes.name} c='white'>
-                    Masoud Karimi
+                    {props.fullName}
                 </Text>
                 <Group wrap="nowrap" gap={10} mt={3}>
                     <IconAt stroke={1.5} size={25} className={classes.icon} />
                     <Text fz="lg" c="white">
-                    itsmasoudkarimi@gmail.com
+                    {props.email}
                     </Text>
                 </Group>
                 <Group wrap="nowrap" gap={10} mt={3}>
                     <IconMapPin stroke={1.5} size={25} className={classes.icon} />
-                    <Text fz="lg" c="white">Turin, Italy</Text>
+                    <Text fz="lg" c="white">{props.location}</Text>
                 </Group>
                 </div>
             </Group>
