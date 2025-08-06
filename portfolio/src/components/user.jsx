@@ -47,24 +47,22 @@ export function Description(props){
     return(
         <Grid >
             <Grid.Col >
-                <Text>
-                    here is my description here is my description here is my description here is my description 
-                    here is my description here is my description here is my description 
-                    here is my description here is my description here is my description 
-                    here is my description here is my description here is my description here is my description here is my description 
-                    here is my description here is my description here is my description 
-                    here is my description here is my description here is my description 
-                    here is my description   here is my description here is my description here is my description here is my description 
-                    here is my description here is my description here is my description 
-                    here is my description here is my description here is my description 
-                    here is my description here is my description here is my description here is my description here is my description 
-                    here is my description here is my description here is my description 
-                    here is my description here is my description here is my description 
-                    here is my description 
-                </Text>
+                {
+                    props.description.map((desc)=>
+                        <SubDescription desc={desc.info} key={desc.id} />
+                    )
+                }
             </Grid.Col>
         </Grid>
 
+    );
+}
+function SubDescription(props){
+    
+    return(
+        <Text mt={5} style={{ textAlign: 'justify' }}>
+            {props.desc}
+        </Text>
     );
 }
 

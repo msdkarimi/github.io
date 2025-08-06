@@ -19,6 +19,13 @@ export function CV() {
     const location = 'Turin, Italy'
 
 
+    // description
+    const description = [
+        {'id':0, 'info':"An Applied AI Researcher with extensive experience developing novel solutions in generative AI and computer vision. Key accomplishments include engineering a pipeline to create semantic segmentation datasets by extracting masks from the internal attention of generative models and using Vision-Language Models (VLMs) with prompt engineering to synthetically caption unlabeled images. Further expertise includes developing specialized classifiers for Out-of-Distribution (OOD) detection via supervised contrastive learning, fine-tuning foundational models using parameter-efficient methods, and tackling extreme data imbalance with curriculum learning and custom batch sampling."},
+        {'id':1, 'info':"In addition to core modeling, experienced in building and deploying end-to-end AI systems. Designed and implemented a series of local, privacy-focused ReAct agents with tool-calling capabilities, stateful long-term memory, and enhanced performance through Chain of Thought (CoT) and few-shot prompting. Possesses full-stack development skills, having built both the backend agent framework using LangGraph and LangChain and the associated front-end interface."},
+
+    ]
+
 
 
     
@@ -39,7 +46,7 @@ export function CV() {
     <Grid>
         <Grid.Col><UserInfoIcons fullName={fullName} title={title} email={email} location={location}  /></Grid.Col>    
         <Grid.Col><Degree degreeName={degreeName} degreeLocation={degreeLocation}/></Grid.Col>
-        <Grid.Col><Divider label="Summary" labelPosition="center" color='#F69E6E' mb={5}/><Description/></Grid.Col>
+        <Grid.Col><Divider label="Summary" labelPosition="center" color='#F69E6E' mb={5}/><Description description={description}/></Grid.Col>
 
         <Grid.Col >
             <Divider label="Work Experience" labelPosition="center" color='#F69E6E' mb={5}/>

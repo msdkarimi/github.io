@@ -22,7 +22,7 @@ export function Project(props) {
 
 
 export function ProjectCard(props) {
-    console.log(props.descriptionPoints)
+    // console.log(props.descriptionPoints)
   return (
     
       <Stack spacing="xs" >
