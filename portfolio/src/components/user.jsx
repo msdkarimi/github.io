@@ -7,16 +7,16 @@ export function UserInfoIcons(props) {
     const child = <Skeleton radius="md" animate={true} />;
   return (
     <Grid mt={10}>
-        <Grid.Col span={{ base: 12, xs: 3 }}>  
+        <Grid.Col span={{ base: 12, sm: 3, md: 2 }}>  
             <Group>
                 <Avatar
                 src={pic}
-                size={200}
+                size={150}
                 radius="lg"
                 />
             </Group>
         </Grid.Col>
-        <Grid.Col span={{ base: 12, xs: 9 }} mt={20}>
+        <Grid.Col span={{base: 12, sm: 9, md: 10  }} mt={20}>
             <Group>
                 <div>
                 <Text fz="xl" fw={700} className={`${classes.name} ${classes.shadow_t}`}  c='white' tt='uppercase'>
@@ -49,7 +49,7 @@ export function Description(props){
             <Grid.Col >
                 {
                     props.description.map((desc)=>
-                        <SubDescription desc={desc.info} key={desc.id} />
+                        <SubDescription desc={desc.info} key={desc.id} id={desc.id} />
                     )
                 }
             </Grid.Col>
@@ -58,9 +58,13 @@ export function Description(props){
     );
 }
 function SubDescription(props){
+    let spacing = 0
+    if (props.id){
+        spacing = 10
+    }
     
     return(
-        <Text mt={5} style={{ textAlign: 'justify' }}>
+        <Text mt={spacing} style={{ textAlign: 'justify' }}>
             {props.desc}
         </Text>
     );
