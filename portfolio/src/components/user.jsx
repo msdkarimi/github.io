@@ -1,18 +1,18 @@
 import { IconAt, IconPhoneCall, IconMapPin, IconCertificate } from '@tabler/icons-react';
 import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack } from '@mantine/core';
-// import classes from './UserInfoIcons.module.css';
 import classes from './css/UserInfoIcons.module.css'
+import pic from '../assets/pic.jpg';
 
 export function UserInfoIcons(props) {
     const child = <Skeleton radius="md" animate={true} />;
   return (
     <Grid mt={10}>
-        <Grid.Col span={{ base: 12, xs: 3 }}>
+        <Grid.Col span={{ base: 12, xs: 3 }}>  
             <Group>
                 <Avatar
-                src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png"
+                src={pic}
                 size={200}
-                radius="md"
+                radius="lg"
                 />
             </Group>
         </Grid.Col>

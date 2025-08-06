@@ -14,7 +14,7 @@ export function CV() {
 
     // info
     const fullName = 'Masoud Karimi'
-    const title = 'Applied AI Engineer'
+    const title = 'Applied AI Engineer (Computer Vision & Agentic Systems)'
     const email = 'itsmasoudkarimi@gmail.com' 
     const location = 'Turin, Italy'
 
