@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { UserInfoIcons } from './user';
-import { Container } from '@mantine/core';
+import { Container, Grid } from '@mantine/core';
+import { Project } from './project';
 
 export function CV() {
   useEffect(() => {
@@ -9,7 +10,14 @@ export function CV() {
 
   return (
    <Container>
-    <UserInfoIcons/>
+    <Grid>
+        <Grid.Col span={{ base: 12, xs: 12 }}><UserInfoIcons/></Grid.Col>
+        <Grid.Col span={{ base: 12, xs: 12 }}><Project/></Grid.Col>
+        <Grid.Col span={{ base: 12, xs: 12 }}><Project/></Grid.Col>
+        <Grid.Col span={{ base: 12, xs: 12 }}><Project/></Grid.Col>
+
+    </Grid>
+    
    </Container>
   );
 }
