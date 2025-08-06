@@ -38,7 +38,7 @@ export function CV() {
     <Grid>
         <Grid.Col><UserInfoIcons fullName={fullName} title={title} email={email} location={location}  /></Grid.Col>    
         <Grid.Col><Degree degreeName={degreeName} degreeLocation={degreeLocation}/></Grid.Col>
-        <Grid.Col><Description/></Grid.Col>
+        <Grid.Col><Divider label="Summary" labelPosition="center" color='#F69E6E' mb={5}/><Description/></Grid.Col>
 
         <Grid.Col >
             <Divider label="Work Experience" labelPosition="center" color='#F69E6E' mb={5}/>

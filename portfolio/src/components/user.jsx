@@ -16,15 +16,14 @@ export function UserInfoIcons(props) {
                 />
             </Group>
         </Grid.Col>
-        <Grid.Col span={{ base: 12, xs: 4 }} mt={20}>
+        <Grid.Col span={{ base: 12, xs: 9 }} mt={20}>
             <Group>
                 <div>
+                <Text fz="xl" fw={700} className={`${classes.name} ${classes.shadow_t}`}  c='white'>
+                    {props.fullName}
+                </Text>
                 <Text fz="lg" tt="uppercase" fw={700} c='white' className={classes.shadow_t}  >
                     {props.title}
-                </Text>
-
-                <Text fz="xl" fw={500} className={`${classes.name} ${classes.shadow_t}`}  c='white'>
-                    {props.fullName}
                 </Text>
                 <Group wrap="nowrap" gap={10} mt={3}>
                     <IconAt stroke={1.5} size={25} className={classes.icon } />
@@ -38,9 +37,6 @@ export function UserInfoIcons(props) {
                 </Group>
                 </div>
             </Group>
-        </Grid.Col>
-        <Grid.Col span={{ base: 12, xs: 4 }}>
-                 
         </Grid.Col>
     </Grid>
   );

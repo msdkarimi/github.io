@@ -7,7 +7,7 @@ export function Project(props) {
   const child = <Skeleton height={140} radius="md" animate={true} />;
 
   return (
-    <Card shadow="md" padding="lg" radius="md" withBorder>
+    <Card className={classes.box_shadow} padding="lg" radius="md">
         <Grid>  
             <Grid.Col span={{ base: 12, xs: 6 }}><ProjectCard title={props.title} name={props.name} place={props.place}  descriptionPoints={props.descriptionPoints} /></Grid.Col>
             <Grid.Col span={{ base: 12, xs: 6 }}>{child}</Grid.Col>
