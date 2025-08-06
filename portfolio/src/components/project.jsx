@@ -6,10 +6,12 @@ export function Project(props) {
   const child = <Skeleton height={140} radius="md" animate={true} />;
 
   return (
-    <Grid>
-        <Grid.Col span={{ base: 12, xs: 6 }}><ProjectCard title={props.title} name={props.name} place={props.place}  descriptionPoints={props.descriptionPoints} /></Grid.Col>
-        <Grid.Col span={{ base: 12, xs: 6 }}>{child}</Grid.Col>
-    </Grid>
+    <Card shadow="md" padding="lg" radius="md" withBorder>
+        <Grid>  
+            <Grid.Col span={{ base: 12, xs: 6 }}><ProjectCard title={props.title} name={props.name} place={props.place}  descriptionPoints={props.descriptionPoints} /></Grid.Col>
+            <Grid.Col span={{ base: 12, xs: 6 }}>{child}</Grid.Col>
+        </Grid>
+    </Card>
   );
 }
 
@@ -21,7 +23,7 @@ export function Project(props) {
 export function ProjectCard(props) {
     console.log(props.descriptionPoints)
   return (
-    <Card shadow="md" padding="lg" radius="md" withBorder>
+    
       <Stack spacing="xs">
         <Title order={3}>{props.title}</Title>
         
@@ -43,11 +45,10 @@ export function ProjectCard(props) {
             </ThemeIcon>
           }
         >
-          {(props.descriptionPoints|| []).map((point) => (
+          {props.descriptionPoints.map((point) => (
             <List.Item key={point.id} >{point.info}</List.Item>
           ))}
         </List>
       </Stack>
-    </Card>
   );
 }
