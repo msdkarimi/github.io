@@ -1,4 +1,4 @@
-import { IconAt, IconPhoneCall, IconMapPin } from '@tabler/icons-react';
+import { IconAt, IconPhoneCall, IconMapPin, IconCertificate } from '@tabler/icons-react';
 import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack } from '@mantine/core';
 // import classes from './UserInfoIcons.module.css';
 import classes from './css/UserInfoIcons.module.css'
@@ -40,22 +40,7 @@ export function UserInfoIcons() {
             </Group>
         </Grid.Col>
         <Grid.Col span={{ base: 12, xs: 4 }}>
-                 <Paper
-                    radius="md"
-                    p="xl"
-                >
-                    <Stack align="center" spacing="sm">
-                    <Text size="lg" fw={600} c="gray.7">
-                        University Degree
-                    </Text>
-                    <Text size="xl" fw={700}>
-                        Bachelor of Science in Computer Science
-                    </Text>
-                    <Text size="md" c="gray.6">
-                        University of Example
-                    </Text>
-                    </Stack>
-                </Paper>
+                 
         </Grid.Col>
     </Grid>
   );
@@ -64,7 +49,7 @@ export function UserInfoIcons() {
 
 export function Description(props){
     return(
-        <Grid mt={10}>
+        <Grid >
             <Grid.Col >
                 <Text>
                     here is my description here is my description here is my description here is my description 
@@ -73,8 +58,40 @@ export function Description(props){
                     here is my description here is my description here is my description here is my description here is my description 
                     here is my description here is my description here is my description 
                     here is my description here is my description here is my description 
+                    here is my description   here is my description here is my description here is my description here is my description 
+                    here is my description here is my description here is my description 
+                    here is my description here is my description here is my description 
+                    here is my description here is my description here is my description here is my description here is my description 
+                    here is my description here is my description here is my description 
+                    here is my description here is my description here is my description 
                     here is my description 
                 </Text>
+            </Grid.Col>
+        </Grid>
+
+    );
+}
+
+export function Degree(props){
+    return(
+        <Grid >
+            <Grid.Col >
+               <Paper mt={10}>
+                    <Stack>
+                        <Group>
+                            <IconCertificate size={45}/>
+                            <div>
+                                <Text size="xl" fw={700}>
+                                    {props.degreeName}
+                                </Text>
+                            
+                                <Text size="lg" c="gray.5" mt={-10} >
+                                    {props.degreeLocation}
+                                </Text>
+                            </div>
+                        </Group>
+                    </Stack>
+                </Paper>
             </Grid.Col>
         </Grid>
 
