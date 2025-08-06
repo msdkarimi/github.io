@@ -1,6 +1,6 @@
 import { Container, Grid, SimpleGrid, Skeleton } from '@mantine/core';
-import { Card, Title, Text, List, ThemeIcon, Badge, Stack, Group } from '@mantine/core';
-import { IconCircleCheck } from '@tabler/icons-react';
+import { Card, Title, Text, List, ThemeIcon, Badge, Stack, Group, Button } from '@mantine/core';
+import { IconCircleCheck, IconCode } from '@tabler/icons-react';
 import classes from './css/UserInfoIcons.module.css'
 
 export function Project(props) {
@@ -9,8 +9,9 @@ export function Project(props) {
   return (
     <Card className={classes.box_shadow} padding="lg" radius="md">
         <Grid>  
-            <Grid.Col span={{ base: 12, xs: 6 }}><ProjectCard title={props.data.title} location={props.data.location} company={props.data.company}  stack={props.data.stack} achievements={props.data.achievements} /></Grid.Col>
-            <Grid.Col span={{ base: 12, xs: 6 }}>{child}</Grid.Col>
+            <Grid.Col>
+                <ProjectCard data={props.data}/>
+            </Grid.Col>
         </Grid>
     </Card>
   );
@@ -22,15 +23,19 @@ export function Project(props) {
 
 
 export function ProjectCard(props) {
-    // console.log(props.descriptionPoints)
+    const handleClick = (the_link) => {
+        window.open(the_link, '_blank');
+    };
+
   return (
     
       <Stack spacing="xs" >
-        <Title order={3} className={classes.shadow} >{props.title}</Title>
+        <Title order={3} className={classes.shadow} >{props.data.title}</Title>
         
-        <Text size="sm" c="dimmed" >
-          at <strong>{props.company}, {props.location}</strong>
+        <Text size="sm" c="dimmed" mt={-15} >
+          at <strong>{props.data.company}, {props.data.location}</strong>
         </Text>
+        {props.data.github ? <Button mt={-10} size="xs" w={100} variant="default" leftSection={<IconCode size={18}/>} onClick={()=>handleClick(props.data.github)}>github</Button>:<></>}
 
         
 
@@ -44,14 +49,14 @@ export function ProjectCard(props) {
             </ThemeIcon>
           }
         >
-          {props.achievements.map((value, index) => (
+          {props.data.achievements.map((value, index) => (
             <List.Item key={index} >{value}</List.Item>
           ))}
         </List>
 
         <Group>
             {
-                props.stack.map((value, index)=>(<Badge key={index} variant="light" color="blue" radius="sm" w="fit-content">{value}</Badge>))
+                props.data.stack.map((value, index)=>(<Badge key={index} variant="light" color="blue" radius="sm" >{value}</Badge>))
             }
         </Group>
         
