@@ -1,10 +1,10 @@
 import { IconAt, IconPhoneCall, IconMapPin } from '@tabler/icons-react';
-import { Avatar, Group, Text, Grid, Skeleton, Card, Stack } from '@mantine/core';
+import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack } from '@mantine/core';
 // import classes from './UserInfoIcons.module.css';
 import classes from './css/UserInfoIcons.module.css'
 
 export function UserInfoIcons() {
-    const child = <Skeleton height={140} radius="md" animate={true} />;
+    const child = <Skeleton radius="md" animate={true} />;
   return (
     <Grid mt={10}>
         <Grid.Col span={{ base: 12, xs: 3 }}>
@@ -39,17 +39,23 @@ export function UserInfoIcons() {
                 </div>
             </Group>
         </Grid.Col>
-        <Grid.Col span={{ base: 12, xs: 4 }} mt={20}>
-            <Card shadow="sm" padding="lg" radius="md" withBorder>
-                <Stack align="center" spacing="xs">
-                <Text size="xl" weight={700}>
-                    B.Sc. in Computer Science
-                </Text>
-                <Text size="md" color="dimmed">
-                    University of Example
-                </Text>
-                </Stack>
-            </Card>
+        <Grid.Col span={{ base: 12, xs: 4 }}>
+                 <Paper
+                    radius="md"
+                    p="xl"
+                >
+                    <Stack align="center" spacing="sm">
+                    <Text size="lg" fw={600} c="gray.7">
+                        University Degree
+                    </Text>
+                    <Text size="xl" fw={700}>
+                        Bachelor of Science in Computer Science
+                    </Text>
+                    <Text size="md" c="gray.6">
+                        University of Example
+                    </Text>
+                    </Stack>
+                </Paper>
         </Grid.Col>
     </Grid>
   );
