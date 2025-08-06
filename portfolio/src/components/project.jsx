@@ -1,5 +1,5 @@
 import { Container, Grid, SimpleGrid, Skeleton } from '@mantine/core';
-import { Card, Title, Text, List, ThemeIcon, Badge, Stack } from '@mantine/core';
+import { Card, Title, Text, List, ThemeIcon, Badge, Stack, Group } from '@mantine/core';
 import { IconCircleCheck } from '@tabler/icons-react';
 import classes from './css/UserInfoIcons.module.css'
 
@@ -9,7 +9,7 @@ export function Project(props) {
   return (
     <Card className={classes.box_shadow} padding="lg" radius="md">
         <Grid>  
-            <Grid.Col span={{ base: 12, xs: 6 }}><ProjectCard title={props.title} name={props.name} place={props.place}  descriptionPoints={props.descriptionPoints} /></Grid.Col>
+            <Grid.Col span={{ base: 12, xs: 6 }}><ProjectCard title={props.data.title} location={props.data.location} company={props.data.company}  stack={props.data.stack} achievements={props.data.achievements} /></Grid.Col>
             <Grid.Col span={{ base: 12, xs: 6 }}>{child}</Grid.Col>
         </Grid>
     </Card>
@@ -28,13 +28,11 @@ export function ProjectCard(props) {
       <Stack spacing="xs" >
         <Title order={3} className={classes.shadow} >{props.title}</Title>
         
-        <Text size="sm" c="dimmed">
-          by <strong>{props.name}</strong>
+        <Text size="sm" c="dimmed" >
+          at <strong>{props.company}, {props.location}</strong>
         </Text>
 
-        <Badge variant="light" color="blue" radius="sm" w="fit-content">
-          {props.place}
-        </Badge>
+        
 
         <List
           spacing="xs"
@@ -46,10 +44,17 @@ export function ProjectCard(props) {
             </ThemeIcon>
           }
         >
-          {props.descriptionPoints.map((point) => (
-            <List.Item key={point.id} >{point.info}</List.Item>
+          {props.achievements.map((value, index) => (
+            <List.Item key={index} >{value}</List.Item>
           ))}
         </List>
+
+        <Group>
+            {
+                props.stack.map((value, index)=>(<Badge key={index} variant="light" color="blue" radius="sm" w="fit-content">{value}</Badge>))
+            }
+        </Group>
+        
       </Stack>
   );
 }

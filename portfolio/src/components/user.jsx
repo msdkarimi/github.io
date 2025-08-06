@@ -60,7 +60,7 @@ export function Description(props){
 function SubDescription(props){
     let spacing = 0
     if (props.id){
-        spacing = 10
+        spacing = 15
     }
     
     return(

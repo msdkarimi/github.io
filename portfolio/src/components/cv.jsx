@@ -3,6 +3,7 @@ import { UserInfoIcons, Description, Degree} from './user';
 import { Container, Grid, Divider } from '@mantine/core';
 import { Project } from './project';
 import classes from './css/UserInfoIcons.module.css'
+import {projects} from '../assets/static_data'
 
 export function CV() {
     
@@ -28,9 +29,6 @@ export function CV() {
 
 
 
-    
-
-
   const data = [
             {'info':'Built using GPT-4 and LangChain', 'id':0},
             {'info':'Supports multi-language parsing', 'id':1},
@@ -46,23 +44,26 @@ export function CV() {
     <Grid>
         <Grid.Col><UserInfoIcons fullName={fullName} title={title} email={email} location={location}  /></Grid.Col>    
         <Grid.Col><Degree degreeName={degreeName} degreeLocation={degreeLocation}/></Grid.Col>
-        <Grid.Col><Divider label="Summary" labelPosition="center" color='#F69E6E' mb={5}/><Description description={description}/></Grid.Col>
+        <Grid.Col>
+            <Divider label="Summary" labelPosition="center" color='#F69E6E' mb={5}/>
+            <Description description={description}/>
+            <Divider label="Work Experience" labelPosition="center" color='#F69E6E' mt={10}/></Grid.Col>
 
-        <Grid.Col >
-            <Divider label="Work Experience" labelPosition="center" color='#F69E6E' mb={5}/>
-            <Project  
-        title="AI-Powered Resume Analyzer"
-        name="Sara Alavi"
-        place="Berlin, Germany"
-        descriptionPoints={data}/></Grid.Col>
+
+        {projects.map((value, index)=><Col data={value} key={index}/>)}
         
-        <Grid.Col ><Project  
-        title="AI-Powered Resume Analyzer"
-        name="Sara Alavi"
-        place="Berlin, Germany"
-        descriptionPoints={data}/></Grid.Col>
     </Grid>
     
    </Container>
   );
+}
+
+function Col(props){
+
+    return(
+        <Grid.Col >
+            <Project data={props.data} />
+        </Grid.Col>
+
+    );
 }
