@@ -12,6 +12,7 @@ export function CV() {
    <Container>
     <Grid>
         <Grid.Col span={{ base: 12, xs: 12 }}><UserInfoIcons/></Grid.Col>
+        
         <Grid.Col span={{ base: 12, xs: 12 }}><Project/></Grid.Col>
         <Grid.Col span={{ base: 12, xs: 12 }}><Project/></Grid.Col>
         <Grid.Col span={{ base: 12, xs: 12 }}><Project/></Grid.Col>

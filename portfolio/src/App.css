@@ -1,15 +1,8 @@
 #root {
-  max-width: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  text-align: start;
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  text-align: start; /* or left, if you want default alignment */
 }
 
 .card {
