@@ -30,9 +30,9 @@ export function ProjectCard(props) {
   return (
     
       <Stack spacing="xs" >
-        <Title order={3} className={classes.shadow} color='white'>{props.data.title}</Title>
+        <Title order={3} color='white'>{props.data.title}</Title>
         
-        <Text size="sm" c="dimmed" mt={-15} >
+        <Text size="sm" mt={-15} >
           at <strong>{props.data.company}, {props.data.location}</strong>
         </Text>
         {props.data.github ? <Button mt={-10} size="xs" w={100} variant="default" leftSection={<IconCode size={18}/>} onClick={()=>handleClick(props.data.github)}>github</Button>:<></>}
