@@ -24,7 +24,7 @@ export function UserInfoIcons(props) {
                 <Text fz="xl" fw={300} className={classes.name}  c='white' tt='uppercase'>
                     {props.data.fullName}
                 </Text>
-                <Text fz="lg" tt="uppercase" fw={300} c='white'   >
+                <Text fz="lg" tt="uppercase" fw={300} c='white'>
                     {props.data.title}
                 </Text>
                 <Group wrap="nowrap" gap={10} mt={3}>
@@ -66,7 +66,7 @@ function SubDescription(props){
     }
     
     return(
-        <Text mt={spacing} size='md' fw={300} c='white' style={{ textAlign: 'justify' }}>
+        <Text mt={spacing} size='lg' fw={300} c='white' style={{ textAlign: 'justify' }}>
             {props.desc}
         </Text>
     );

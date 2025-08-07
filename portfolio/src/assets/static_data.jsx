@@ -76,8 +76,12 @@ export const technicalSkils = [
 ]
 
 export const description = [
-    'Applied AI Researcher with expertise in generative vision models, prompt-based image synthesis, and segmentation. Experienced in generating semantic masks from internal model representations (cross/self-attention), creating synthetic segmentation datasets, and leveraging VLMs for automatic caption generation. Skilled in OOD detection using supervised contrastive learning, weakly supervised segmentation via class activation maps, and domain adaptation through parameter-efficient fine-tuning of panoptic segmentation models. Applied curriculum learning and custom batch sampling to handle class imbalance in classification tasks.',
-    'Additionally, developed privacy-preserving, stateful autonomous agents using LangGraph/LangChain and Ollama, with tool-calling, long-term memory, chain-of-thought reasoning, and full-stack deployment capabilities.',
+    "Applied AI Researcher specializing in generative vision models, prompt-based image synthesis,\
+     and segmentation. Experienced in generating semantic masks from model's internal representation (attention modules), creating synthetic datasets,\
+      and using VLMs for captioning. Skilled in OOD detection, weakly supervised segmentation, and domain adaptation\
+       via efficient fine-tuning. Applied curriculum learning and custom sampling to address class imbalance in classification.",
+    "Developed privacy-preserving, stateful autonomous agents with LangGraph/LangChain and Ollama, featuring tool-calling, long-term memory,\
+     chain-of-thought reasoning, and full-stack deployment.",
 ]
 
 export const workExperiences = [
@@ -86,8 +90,12 @@ export const workExperiences = [
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
         'date': 'Jun 2024 - Oct. 2025',
-        'github': 'https://github.com/msdkarimi/automation_agents',
-        'stack':['PyTorch', 'Torchvision', 'Python', 'DDPM', 'DDIM', 'VAE', 'OpenCV', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Grad-CAM',  'W&B','Spark', 'HPC', 'Multi-GPU programming', 'Mixed-precision modeling', 'Gradient checkpointing'],
+        'github': [
+            {'name':'Difussion model', 'link':'https://github.com/msdkarimi/pl_ldm'},
+            {'name':'WSSS model', 'link':'https://github.com/msdkarimi/wsss'},
+            {'name':'OOD model', 'link':'https://github.com/msdkarimi/clean_pipeline'}
+        ],
+        'stack':['PyTorch', 'Torchvision', 'Python', 'VLM(Gemma-3)', 'DDPM', 'DDIM', 'VAE', 'OpenCV', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Grad-CAM',  'W&B','Spark', 'HPC', 'Multi-GPU programming', 'Mixed-precision modeling', 'Gradient checkpointing'],
         'achievements': [
             'Developed a prompt-driven high resolution synthetic image–mask dataset by training a guided latent diffusion model\
              combining a Variational Autoencoder (VAE) with a Denoising Diffusion Probabilistic Model (DDPM).\
@@ -105,7 +113,7 @@ export const workExperiences = [
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
         'date': 'Jun. 2025 - Aug 2025',
-        'github': 'https://github.com/msdkarimi/automation_agents',
+        'github': [],
         'stack':['PyTorch', 'Torchvision', 'Python', 'Open-cv', 'Pandas', 'Numpy', 'TensorBoard' ],
         'achievements': [
             'Implemented a Query2Label (Q2L)-based transformer architecture for multi-label image classification,\
@@ -122,7 +130,7 @@ export const workExperiences = [
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
         'date': 'Oct. 2023 - Jun 2024',
-        'github': '',
+        'github': [],
         'stack':['PyTorch', 'Torchvision', 'Python', 'Stable Diffusion', 'SAM', 'TensorBoard'],
         'achievements': [
             'Designed and implemented parameter-efficient adaptor modules to facilitate domain adaptation\
@@ -145,37 +153,77 @@ export const workExperiences = [
     //     'title':"",
     //     'company': 'Politecnico di Torino',
     //     'location': 'Turin, Italy',
-    //     'github': '',
+    //     'github': [{'name':'', 'link':''}],
     //     'stack':[],
     //     'achievements': [
              
     //     ],
     // },
 
+
 ]
 
 export const projects = [
     {
-        'title':"",
-        'company': 'Politecnico di Torino',
-        'location': 'Turin, Italy',
-        'github': '',
-        'stack':[],
+        'title':"Intelligent Ticket Resolution Agent with Tool Calling (ReAct-based)",
+        'company': '',
+        'location': '',
+        'date': '',
+        'github': [{'name':'Repository', 'link':'https://github.com/msdkarimi/automation_agents'}],
+        'stack':['Python', 'LangGraph', 'LangChain', 'Ollama', 'ReAct agent', 'Chain of Thought', 'Few-Shot Prompting', 'Tool Calling', 'React', 'fastAPI', 'JavaScript', 'SQLAlchemy', ],
         'achievements': [
-             
+             "Developed an intelligent ticket resolution agent using LangGraph and LangChain,\
+              designed with the ReAct (Reasoning and Acting) paradigm to enable advanced reasoning\
+               and dynamic tool-calling capabilities.",
+            "Implemented both episodic and instructional memory using custom memory components for\
+             better contextual understanding and continuity.",
+            "Employed Chain of Thought prompting and Few-Shot examples to enhance reasoning\
+             accuracy and improve task-specific performance.",
+            "Used Ollama to run the language model locally, ensuring data privacy and secure processing.",
+            "Built a React.js-based frontend leveraging React hooks for efficient state management\
+             and dynamic visualization of agent responses to enhance user interaction.",
+            "Developed the backend using FastAPI, ensuring high performance and easy API integration.",
+            "Utilized PostgreSQL as the primary database, with SQLAlchemy ORM for efficient and structured database interactions.",
         ],
     },
 
     {
-        'title':"",
-        'company': 'Politecnico di Torino',
-        'location': 'Turin, Italy',
-        'github': '',
-        'stack':[],
+        'title':"Detection of Anomalous Behaviour in Industrial Robot",
+        'company': 'Coursework: AI in application',
+        'location': ' ',
+        'github': [{'name':'Repository', 'link':'https://github.com/msdkarimi/ML-in-application'}],
+        'stack':['Python', 'PyTorch',  'Adversarial Training', 'NumPy',  'Pandas',  'Matplotlib',  'TensorBoard',],
         'achievements': [
-             
+            "Train a deep autoencoder to reconstruct normal time series data with minimal reconstruction error.\
+              Incorporate a discriminator network within an adversarial training framework, where the discriminator\
+               acts as a regularizer by distinguishing between real (original) and reconstructed sequences. ",
+            "Apply R1 regularization to the discriminator's gradients to mitigate overfitting and promote\
+             better generalization across unseen data distributions. ",
         ],
     },
+    {
+        'title':"Sim-to-Real transfer of RL policies in robotics",
+        'company': 'Coursework: Advanced ML',
+        'location': ' ',
+        'github': [{'name':'Repository', 'link':'https://github.com/msdkarimi/AdvancedML'}],
+        'stack':['Python', 'PyTorch', 'Torchvision', 'CNN', 'Stable-Baselines3', 'MuJoCo', 'OpenCV'],
+        'achievements': [
+            "Develop a reinforcement learning pipeline by employing a third-party library to train an agent, using Domain Randomization\
+             to learn robust policies that transfer well to the target domain, using CNNs to train control policies from\
+              visual input, enabling robots to autonomously interact with the environment through raw images of environment.",
+            "For simulation Gym environment is used to model the robot, MuJoCo is used as underlying physics engine."
+        ],
+    },
+    // {
+    //     'title':"",
+    //     'company': 'Politecnico di Torino',
+    //     'location': 'Turin, Italy',
+    //     'github': [{'name':'', 'link':''}],
+    //     'stack':[],
+    //     'achievements': [
+             
+    //     ],
+    // },
 
 ]
 
