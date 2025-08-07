@@ -20,21 +20,21 @@ export function UserInfoIcons(props) {
         <Grid.Col span={{base: 12, sm: 9, md: 10  }} mt={20}>
             <Group>
                 <div>
-                <Text fz="xl" fw={700} className={`${classes.name}`}  c='white' tt='uppercase'>
+                <Text fz="xl" fw={300} className={`${classes.name}`}  c='white' tt='uppercase'>
                     {props.data.fullName}
                 </Text>
-                <Text fz="lg" tt="uppercase" fw={700} c='white'   >
+                <Text fz="lg" tt="uppercase" fw={300} c='white'   >
                     {props.data.title}
                 </Text>
                 <Group wrap="nowrap" gap={10} mt={3}>
                     <IconAt stroke={1.5} size={25}/>
-                    <Text fz="lg" c="white" >
+                    <Text fz="lg" fw={200} c="white" >
                     {props.data.email}
                     </Text>
                 </Group>
                 <Group wrap="nowrap" gap={10} mt={3}>
                     <IconMapPin stroke={1.5} size={25}  />
-                    <Text fz="lg" c="white" className={classes.shadow}>{props.data.location}</Text>
+                    <Text fw={200} fz="lg" c="white" className={classes.shadow}>{props.data.location}</Text>
                 </Group>
                 </div>
             </Group>
@@ -65,7 +65,7 @@ function SubDescription(props){
     }
     
     return(
-        <Text mt={spacing} style={{ textAlign: 'justify' }}>
+        <Text mt={spacing} size='md' fw={300} c='white' style={{ textAlign: 'justify' }}>
             {props.desc}
         </Text>
     );
@@ -112,7 +112,7 @@ function SubExpertise(props){
                                 <List listStyleType="circle" >
                                     {skill.sub.map((skill, index)=>(
                                         <List.Item key={index} mt={5}>
-                                            <Text size='md' fw={100} c='white'>
+                                            <Text size='md' fw={300} c='white'>
                                                 {skill}
                                             </Text>
                                         </List.Item>
@@ -140,10 +140,10 @@ export function Degree(props){
                             <IconCertificate size={40}/>
                                 <Stack >
                                     
-                                    <Text size="xl" fw={500}>
+                                    <Text size='xl' fw={400} c='white'>
                                         {degree.degreeName}
                                     </Text>
-                                    <Text size="lg" c="gray.5" mt={-15} >
+                                    <Text size='md' fw={300} c='white' mt={-15} >
                                         {degree.degreeLocation}
                                     </Text>
                                 </Stack>

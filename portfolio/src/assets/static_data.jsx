@@ -70,6 +70,7 @@ export const technicalSkils = [
             'PyTorch, TensorFlow, Jax, LangGraph and LangChain',
             'Spark, Hadoop, Pandas, NumPy, Scikit-learn, Matplotlib',
             'PostgreSQL, SQLAlchemy (ORM), MongoDB, Node.js, fastAPI',
+            'Linux, Bash, SLURM, HPC clusters'
         ]
     }
 ]
@@ -84,10 +85,11 @@ export const projects = [
         'title':"Applied AI Researcher, DARE Project",
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
+        'date': 'Jun 2024 - Oct. 2025',
         'github': 'https://github.com/msdkarimi/automation_agents',
-        'stack':['PyTorch', 'Torchvision', 'Python', 'OpenCV', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Grad-CAM',  'W&B','Spark', 'HPC', 'Multi-GPU programming', 'Mixed-precision modeling', 'Gradient checkpointing'],
+        'stack':['PyTorch', 'Torchvision', 'Python', 'DDPM', 'DDIM', 'OpenCV', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Grad-CAM',  'W&B','Spark', 'HPC', 'Multi-GPU programming', 'Mixed-precision modeling', 'Gradient checkpointing'],
         'achievements': [
-            'Developed a prompt-driven synthetic image–mask dataset by training a guided latent diffusion model\
+            'Developed a prompt-driven high resolution synthetic image–mask dataset by training a guided latent diffusion model\
              combining a Variational Autoencoder (VAE) with a Denoising Diffusion Probabilistic Model (DDPM).\
               Leveraged DDIM sampling for accelerated inference and employed classifier-free guidance to enhance the fidelity and alignment of\
                image–mask pairs with textual prompts. resulting in improved IoU scores across various object categories, with performance gains varying by class — reaching up to 10% in certain cases.',
@@ -102,6 +104,7 @@ export const projects = [
         'title':"ML Engineer, DIVINE Project",
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
+        'date': 'Jun. 2025 - Aug 2025',
         'github': 'https://github.com/msdkarimi/automation_agents',
         'stack':['PyTorch', 'Torchvision', 'Python', 'Open-cv', 'Pandas', 'Numpy', 'TensorBoard' ],
         'achievements': [
@@ -118,6 +121,7 @@ export const projects = [
         'title':"Graduate Researcher",
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
+        'date': 'Oct. 2023 - Jun 2024',
         'github': '',
         'stack':[],
         'achievements': [

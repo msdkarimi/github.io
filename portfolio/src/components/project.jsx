@@ -1,5 +1,5 @@
 import { Container, Grid, SimpleGrid, Skeleton } from '@mantine/core';
-import { Card, Title, Text, List, ThemeIcon, Badge, Stack, Group, Button } from '@mantine/core';
+import { Card, Title, Text, List, ThemeIcon, Badge, Stack, Group, Button, Flex } from '@mantine/core';
 import { IconRosetteDiscountCheckFilled, IconCode } from '@tabler/icons-react';
 import classes from './css/UserInfoIcons.module.css'
 
@@ -30,8 +30,10 @@ export function ProjectCard(props) {
   return (
     
       <Stack spacing="xs" >
-        <Title order={3} color='white'>{props.data.title}</Title>
-        
+        <Flex justify="space-between" w="100%">
+          <Title order={3} color='white'>{props.data.title}</Title>
+          <Text size="md" fw={100}>{props.data.date}</Text>
+        </Flex>
         <Text size="sm" mt={-15} >
            <Text size='md' fw={100} c='white'>at {props.data.company}, {props.data.location}</Text>
         </Text>
