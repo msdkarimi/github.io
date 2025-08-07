@@ -11,10 +11,43 @@ export const degrees = [
     {'degreeName' : 'M.Sc. in Computer Engineering - AI & Data Analytics',
      'degreeLocation' : 'at Politecnico di Torino, Italy'
     },
-    {'degreeName' : 'M.Sc. in Computer Engineering - AI & Data Analytics',
-        'degreeLocation' : 'at Politecnico di Torino, Italy'
+    {'degreeName' : 'B.Sc. in Computer Engineering - Software Engineering',
+        'degreeLocation' : 'at Persian Gulf University, Iran'
     },
 
+]
+
+export const technicalSkils = [
+    {   'title': 'Machine Learning | Deep Learning',
+        'sub':[
+            'Synthetic Data Generation using Diffusion Models',
+            'Out-of-Distribution (OOD) Detection',
+            'Semantic Segmentation (Supervised & Weakly Supervised)',
+            'Image Classification (multi-class, multi-label)',
+            'Model Adaptation: Parameter-efficient fine-tuning (e.g., Adapters, LoRA)',
+            'Explainable AI (XAI)',
+            'Curriculum learning'
+        ]
+    },
+    {
+        'title': 'Agentic AI & Autonomous Systems',
+        'sub': [
+            'Stateful agents with episodic and instructional memory for long-term context retention',
+            'ReAct-based agents with tool-calling capabilities',
+            'Chain-of-Thought and few-shot prompting.',
+            'Deployed LLMs locally via Ollama',
+        ]
+
+    },
+    {
+        'title': 'Frameworks | Tools',
+        'sub': [
+            'Python, C, Java, JavaScript, React',
+            'PyTorch, TensorFlow, Jax, LangGraph and LangChain',
+            'Spark, Hadoop, Pandas, NumPy, Scikit-learn, Matplotlib',
+            'PostgreSQL, SQLAlchemy (ORM), MongoDB, Node.js, fastAPI',
+        ]
+    }
 ]
 
 export const description = [
@@ -28,7 +61,7 @@ export const projects = [
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
         'github': 'https://github.com/msdkarimi/automation_agents',
-        'stack':['pytorch', 'Torchvision', 'python', 'open-cv', 'pandas', 'numpy', 'Grad-CAM',  'W&B','spark', 'HPC', 'Multi-GPU programming', 'Mixed-precision modeling', 'Gradient checkpointing'],
+        'stack':['PyTorch', 'Torchvision', 'Python', 'OpenCV', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Grad-CAM',  'W&B','Spark', 'HPC', 'Multi-GPU programming', 'Mixed-precision modeling', 'Gradient checkpointing'],
         'achievements': [
             'Developed a prompt-driven synthetic image–mask dataset by training a guided latent diffusion model\
              combining a Variational Autoencoder (VAE) with a Denoising Diffusion Probabilistic Model (DDPM).\
@@ -46,7 +79,7 @@ export const projects = [
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
         'github': 'https://github.com/msdkarimi/automation_agents',
-        'stack':['pytorch', 'Torchvision', 'python', 'open-cv', 'pandas', 'numpy', 'TensorBoard' ],
+        'stack':['PyTorch', 'Torchvision', 'Python', 'Open-cv', 'Pandas', 'Numpy', 'TensorBoard' ],
         'achievements': [
             'Implemented a Query2Label (Q2L)-based transformer architecture for multi-label image classification,\
             leveraging set-based prediction to capture inter-label dependencies and contextual relationships in complex image datasets.',

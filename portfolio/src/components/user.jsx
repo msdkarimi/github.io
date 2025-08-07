@@ -1,7 +1,8 @@
 import { IconAt, IconPhoneCall, IconMapPin, IconCertificate } from '@tabler/icons-react';
-import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack } from '@mantine/core';
+import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider } from '@mantine/core';
 import classes from './css/UserInfoIcons.module.css'
 import pic from '../assets/pic.jpg';
+import React from 'react';
 
 export function UserInfoIcons(props) {
     const child = <Skeleton radius="md" animate={true} />;
@@ -70,30 +71,74 @@ function SubDescription(props){
     );
 }
 
-export function Degree(props){
+export function DegreeExpertise(props){
     return(
         <Grid className={classes.shadow} >
-            <Grid.Col >
-               <Paper mt={10}>
-                    <Stack>
-                        {props.data.map((degree, index)=>(
-                            <Group key={index}>
-                                <IconCertificate size={50}/>
-                                <div>
-                                    <Text size="xl" fw={700}>
-                                        {degree.degreeName}
-                                    </Text>
-                                
-                                    <Text size="lg" c="gray.5" mt={-10} >
-                                        {degree.degreeLocation}
-                                    </Text>
-                                </div>
-                            </Group>
-                        ))}
-                    </Stack>
-                </Paper>
+            <Grid.Col span={{base: 12, sm: 6, md: 8}} >
+                <Expertise data={props.skills}/>
+            </Grid.Col>
+            <Grid.Col span={{base: 12, sm: 6, md: 4}} >
+                <Degree data={props.degrees}/>  
             </Grid.Col>
         </Grid>
 
+    );
+}
+
+function Expertise(props){
+    return(
+        
+        <Paper mt={10}>
+            {/* <Text size="xl" fw={500}>:</Text> */}
+            <List withPadding listStyleType="square" >
+
+            {props.data.map((skill, index)=>(
+                        <List.Item key={index} mt={15}>
+                            <Text fw={600}>
+                                <strong>{skill.title}</strong>
+                            </Text>
+                            <Stack>
+                                <List listStyleType="square"  icon={<Text>-</Text>}>
+                                    {skill.sub.map((skill, index)=>(
+                                        <List.Item key={index}>
+                                            <Text fw={500}>
+                                                {skill}
+                                            </Text>
+                                        </List.Item>
+                                    ))}
+                                </List> 
+                            </Stack>
+
+                        </List.Item>
+                    ))}
+            </List>
+        </Paper>
+
+    );
+}
+
+function Degree(props){
+    return(
+        <Paper mt={10}>
+            <List listStyleType="square">
+                {props.data.map((degree, index)=>(
+                    <React.Fragment key={index}>
+                        {index !== 0 && <Divider my="sm" />}
+                        <List.Item>
+                                <Stack >
+                                    {/* <IconCertificate size={30}/> */}
+                                        <Text size="xl" fw={500}>
+                                            {degree.degreeName}
+                                        </Text>
+                                        
+                                        <Text size="lg" c="gray.5" mt={-15} >
+                                            {degree.degreeLocation}
+                                        </Text>
+                                </Stack>  
+                        </List.Item>
+                    </React.Fragment>
+                ))}
+            </List> 
+        </Paper>
     );
 }
