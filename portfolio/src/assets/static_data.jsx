@@ -17,6 +17,30 @@ export const degrees = [
 
 ]
 
+export const languages = [
+    {
+        'language': 'Persian',
+        'level': 'Native'
+    },
+    {
+        'language': 'English',
+        'level': 'Professional'
+    },
+    {
+        'language': 'Italian',
+        'level': 'Intermediate'
+    }
+]
+
+export const referee = [
+    {
+        'name': 'Andrea Bottino',
+        'title': 'Associate Proffesor',
+        'at': 'Politecnico di Torino',
+        'email': 'andrea.bottino@polito.it'
+    },
+]
+
 export const technicalSkils = [
     {   'title': 'Machine Learning | Deep Learning',
         'sub':[

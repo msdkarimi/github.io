@@ -1,4 +1,4 @@
-import { IconAt, IconPhoneCall, IconMapPin, IconCertificate } from '@tabler/icons-react';
+import { IconAt, IconPhoneCall, IconMapPin, IconMailFilled } from '@tabler/icons-react';
 import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider } from '@mantine/core';
 import classes from './css/UserInfoIcons.module.css'
 import pic from '../assets/pic.jpg';
@@ -75,13 +75,13 @@ export function DegreeExpertise(props){
     return(
         <Grid className={classes.shadow} >
             <Grid.Col span={{base: 12, sm: 6, md: 8}} >
-                <Expertise data={props.skills}/>
+                <Divider label="Technical Skills" labelPosition="center" color='#F69E6E' mt={10}/>
+                <Expertise data={props.skills} />
             </Grid.Col>
             <Grid.Col span={{base: 12, sm: 6, md: 4}} >
-                <Degree data={props.degrees}/>  
+                <Degree data={props.degrees} lang={props.lang} ref={props.ref}/>  
             </Grid.Col>
         </Grid>
-
     );
 }
 
@@ -120,25 +120,64 @@ function Expertise(props){
 function Degree(props){
     return(
         <Paper mt={10}>
+            <Divider label="Education" labelPosition="center" color='#F69E6E'></Divider>
             <List listStyleType="square">
                 {props.data.map((degree, index)=>(
                     <React.Fragment key={index}>
-                        {index !== 0 && <Divider my="sm" />}
+                        {index !== 0 && <Divider my="sm" variant="dashed" />}
                         <List.Item>
                                 <Stack >
-                                    {/* <IconCertificate size={30}/> */}
-                                        <Text size="xl" fw={500}>
-                                            {degree.degreeName}
-                                        </Text>
-                                        
-                                        <Text size="lg" c="gray.5" mt={-15} >
-                                            {degree.degreeLocation}
-                                        </Text>
+                                    <Text size="xl" fw={500}>
+                                        {degree.degreeName}
+                                    </Text>
+                                    <Text size="lg" c="gray.5" mt={-15} >
+                                        {degree.degreeLocation}
+                                    </Text>
                                 </Stack>  
                         </List.Item>
                     </React.Fragment>
                 ))}
-            </List> 
+            </List>
+            <List listStyleType="square">
+            <Divider label="Language" labelPosition="center" color='#F69E6E' mt={10}></Divider>
+                {props.lang.map((lang, index)=>(
+                        <React.Fragment key={index}>
+                            {index !== 0 && <Divider my="sm" variant="dashed" />}
+                            <List.Item>
+                                    <Group >
+                                        <Text size="xl" fw={500}>
+                                            {lang.language} 
+                                        </Text>
+                                        
+                                        <Text size="lg" c="gray.5">
+                                            ({lang.level})
+                                        </Text>
+                                    </Group>  
+                            </List.Item>
+                        </React.Fragment>
+                    ))}
+            </List>
+            <List listStyleType="square">
+            <Divider label="Referee" labelPosition="center" color='#F69E6E' mt={10}></Divider>
+                {props.ref.map((ref, index)=>(
+                        <React.Fragment key={index}>
+                            {index !== 0 && <Divider my="sm" variant="dashed" />}
+                            <List.Item>
+                                <Stack>
+                                        <Text size="xl" fw={500}>
+                                            {ref.name} 
+                                        </Text>
+                                        
+                                        <Text c="gray.5">
+                                            {ref.title}, at {ref.at}
+                                        </Text>
+                                    <Group><IconMailFilled/><Text>{ref.email}</Text></Group>
+                                    
+                                </Stack>  
+                            </List.Item>
+                        </React.Fragment>
+                    ))}
+            </List>
         </Paper>
     );
 }

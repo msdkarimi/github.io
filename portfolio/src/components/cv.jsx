@@ -3,7 +3,7 @@ import { UserInfoIcons, Description, DegreeExpertise} from './user';
 import { Container, Grid, Divider } from '@mantine/core';
 import { Project } from './project';
 import classes from './css/UserInfoIcons.module.css'
-import {projects, description, head_line, degrees, technicalSkils} from '../assets/static_data'
+import {projects, description, head_line, degrees, technicalSkils, languages, referee} from '../assets/static_data'
 
 export function CV() {
     
@@ -16,12 +16,10 @@ export function CV() {
     
     <Grid>
         <Grid.Col><UserInfoIcons data={head_line} /></Grid.Col>    
-        {/* <Grid.Col><DegreeExpertise degrees={degrees} skills={technicalSkils}/></Grid.Col> */}
         <Grid.Col>
             <Divider label="Summary" labelPosition="center" color='#F69E6E' mb={5}/>
             <Description description={description}/>
-            <Divider label="Technical skills / Education" labelPosition="center" color='#F69E6E' mt={10}/>
-            <DegreeExpertise degrees={degrees} skills={technicalSkils}/>
+            <DegreeExpertise degrees={degrees} skills={technicalSkils} lang={languages} ref={referee}/>
             <Divider label="Work Experience" labelPosition="center" color='#F69E6E' mt={10}/>
             </Grid.Col>
 
