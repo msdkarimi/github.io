@@ -20,20 +20,20 @@ export function UserInfoIcons(props) {
             <Group>
                 <div>
                 <Text fz="xl" fw={700} className={`${classes.name} ${classes.shadow_t}`}  c='white' tt='uppercase'>
-                    {props.fullName}
+                    {props.data.fullName}
                 </Text>
                 <Text fz="lg" tt="uppercase" fw={700} c='white' className={classes.shadow_t}  >
-                    {props.title}
+                    {props.data.title}
                 </Text>
                 <Group wrap="nowrap" gap={10} mt={3}>
                     <IconAt stroke={1.5} size={25} className={classes.icon } />
                     <Text fz="lg" c="white" className={classes.shadow}>
-                    {props.email}
+                    {props.data.email}
                     </Text>
                 </Group>
                 <Group wrap="nowrap" gap={10} mt={3}>
                     <IconMapPin stroke={1.5} size={25} className={classes.icon} />
-                    <Text fz="lg" c="white" className={classes.shadow}>{props.location}</Text>
+                    <Text fz="lg" c="white" className={classes.shadow}>{props.data.location}</Text>
                 </Group>
                 </div>
             </Group>
@@ -76,18 +76,20 @@ export function Degree(props){
             <Grid.Col >
                <Paper mt={10}>
                     <Stack>
-                        <Group>
-                            <IconCertificate size={50}/>
-                            <div>
-                                <Text size="xl" fw={700}>
-                                    {props.degreeName}
-                                </Text>
-                            
-                                <Text size="lg" c="gray.5" mt={-10} >
-                                    {props.degreeLocation}
-                                </Text>
-                            </div>
-                        </Group>
+                        {props.data.map((degree, index)=>(
+                            <Group key={index}>
+                                <IconCertificate size={50}/>
+                                <div>
+                                    <Text size="xl" fw={700}>
+                                        {degree.degreeName}
+                                    </Text>
+                                
+                                    <Text size="lg" c="gray.5" mt={-10} >
+                                        {degree.degreeLocation}
+                                    </Text>
+                                </div>
+                            </Group>
+                        ))}
                     </Stack>
                 </Paper>
             </Grid.Col>

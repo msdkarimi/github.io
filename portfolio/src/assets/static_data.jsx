@@ -1,4 +1,22 @@
 
+export const head_line = {
+     'fullName' : 'Masoud Karimi',
+     'title' : 'Applied AI Engineer (Computer Vision & Agentic Systems)',
+     'email' : 'itsmasoudkarimi@gmail.com',
+     'location' : 'Turin, Italy',
+
+}
+
+export const degrees = [
+    {'degreeName' : 'M.Sc. in Computer Engineering - AI & Data Analytics',
+     'degreeLocation' : 'at Politecnico di Torino, Italy'
+    },
+    {'degreeName' : 'M.Sc. in Computer Engineering - AI & Data Analytics',
+        'degreeLocation' : 'at Politecnico di Torino, Italy'
+    },
+
+]
+
 export const description = [
     'Applied AI Researcher with expertise in generative vision models, prompt-based image synthesis, and segmentation. Experienced in generating semantic masks from internal model representations (cross/self-attention), creating synthetic segmentation datasets, and leveraging VLMs for automatic caption generation. Skilled in OOD detection using supervised contrastive learning, weakly supervised segmentation via class activation maps, and domain adaptation through parameter-efficient fine-tuning of panoptic segmentation models. Applied curriculum learning and custom batch sampling to handle class imbalance in classification tasks.',
     'Additionally, developed privacy-preserving, stateful autonomous agents using LangGraph/LangChain and Ollama, with tool-calling, long-term memory, chain-of-thought reasoning, and full-stack deployment capabilities.',
@@ -24,19 +42,30 @@ export const projects = [
         ],
     },
     {
-    'title':"ML Engineer, DIVINE Project",
-    'company': 'Politecnico di Torino',
-    'location': 'Turin, Italy',
-    'github': 'https://github.com/msdkarimi/automation_agents',
-    'stack':['pytorch', 'Torchvision', 'python', 'open-cv', 'pandas', 'numpy', 'TensorBoard' ],
-    'achievements': [
-        'Implemented a Query2Label (Q2L)-based transformer architecture for multi-label image classification,\
-         leveraging set-based prediction to capture inter-label dependencies and contextual relationships in complex image datasets.',
+        'title':"ML Engineer, DIVINE Project",
+        'company': 'Politecnico di Torino',
+        'location': 'Turin, Italy',
+        'github': 'https://github.com/msdkarimi/automation_agents',
+        'stack':['pytorch', 'Torchvision', 'python', 'open-cv', 'pandas', 'numpy', 'TensorBoard' ],
+        'achievements': [
+            'Implemented a Query2Label (Q2L)-based transformer architecture for multi-label image classification,\
+            leveraging set-based prediction to capture inter-label dependencies and contextual relationships in complex image datasets.',
 
-        'Addressed extreme class imbalance using a custom curriculum learning strategy,\
-         progressively increasing training difficulty by reorganizing data sampling based on label frequency and model confidence.',
-         
-    ],
+            'Addressed extreme class imbalance using a custom curriculum learning strategy,\
+            progressively increasing training difficulty by reorganizing data sampling based on label frequency and model confidence.',
+            
+        ],
+    },
+
+    {
+        'title':"",
+        'company': 'Politecnico di Torino',
+        'location': 'Turin, Italy',
+        'github': '',
+        'stack':[],
+        'achievements': [
+             
+        ],
     }
 
 ]
