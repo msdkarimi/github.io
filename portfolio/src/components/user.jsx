@@ -72,16 +72,24 @@ function SubDescription(props){
 }
 
 export function DegreeExpertise(props){
+    const leftColumn = props.skills.filter((_, i) => i % 2 === 0);
+    const rightColumn = props.skills.filter((_, i) => i % 2 === 1);
     return(
-        <Grid className={classes.shadow} >
-            <Grid.Col span={{base: 12, sm: 6, md: 8}} >
-                <Divider label="Technical Skills" labelPosition="center" color='#F69E6E' mt={10}/>
-                <Expertise data={props.skills} />
-            </Grid.Col>
-            <Grid.Col span={{base: 12, sm: 6, md: 4}} >
-                <Degree data={props.degrees} lang={props.lang} ref={props.ref}/>  
-            </Grid.Col>
-        </Grid>
+        <>
+            <Divider label="Technical Skills" labelPosition="center" color='#F69E6E' mt={10}/>
+            <Grid className={classes.shadow} >
+                
+                <Grid.Col  span={6}>
+                    <Expertise data={leftColumn} />
+                </Grid.Col>
+                <Grid.Col  span={6}>
+                    <Expertise data={rightColumn} />
+                </Grid.Col>
+                {/* <Grid.Col span={{base: 12, sm: 6, md: 4}} >
+                    <Degree data={props.degrees} lang={props.lang} ref={props.ref}/>  
+                </Grid.Col> */}
+            </Grid>
+        </>
     );
 }
 
@@ -94,14 +102,14 @@ function Expertise(props){
 
             {props.data.map((skill, index)=>(
                         <List.Item key={index} mt={15}>
-                            <Text fw={600}>
+                            <Text fw={700}>
                                 <strong>{skill.title}</strong>
                             </Text>
                             <Stack>
                                 <List listStyleType="square"  icon={<Text>-</Text>}>
                                     {skill.sub.map((skill, index)=>(
                                         <List.Item key={index}>
-                                            <Text fw={500}>
+                                            <Text fw={600}>
                                                 {skill}
                                             </Text>
                                         </List.Item>
