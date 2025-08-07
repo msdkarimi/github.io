@@ -11,9 +11,9 @@ export const degrees = [
     {'degreeName' : 'M.Sc. in Computer Engineering - AI & Data Analytics',
      'degreeLocation' : 'at Politecnico di Torino, Italy'
     },
-    // {'degreeName' : 'B.Sc. in Computer Engineering - Software Engineering',
-    //     'degreeLocation' : 'at Persian Gulf University, Iran'
-    // },
+    {'degreeName' : 'B.Sc. in Computer Engineering - Software Engineering',
+        'degreeLocation' : 'at Persian Gulf University, Iran'
+    },
 
 ]
 
@@ -80,14 +80,14 @@ export const description = [
     'Additionally, developed privacy-preserving, stateful autonomous agents using LangGraph/LangChain and Ollama, with tool-calling, long-term memory, chain-of-thought reasoning, and full-stack deployment capabilities.',
 ]
 
-export const projects = [
+export const workExperiences = [
     {
         'title':"Applied AI Researcher, DARE Project",
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
         'date': 'Jun 2024 - Oct. 2025',
         'github': 'https://github.com/msdkarimi/automation_agents',
-        'stack':['PyTorch', 'Torchvision', 'Python', 'DDPM', 'DDIM', 'OpenCV', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Grad-CAM',  'W&B','Spark', 'HPC', 'Multi-GPU programming', 'Mixed-precision modeling', 'Gradient checkpointing'],
+        'stack':['PyTorch', 'Torchvision', 'Python', 'DDPM', 'DDIM', 'VAE', 'OpenCV', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Grad-CAM',  'W&B','Spark', 'HPC', 'Multi-GPU programming', 'Mixed-precision modeling', 'Gradient checkpointing'],
         'achievements': [
             'Developed a prompt-driven high resolution synthetic image–mask dataset by training a guided latent diffusion model\
              combining a Variational Autoencoder (VAE) with a Denoising Diffusion Probabilistic Model (DDPM).\
@@ -123,7 +123,7 @@ export const projects = [
         'location': 'Turin, Italy',
         'date': 'Oct. 2023 - Jun 2024',
         'github': '',
-        'stack':[],
+        'stack':['PyTorch', 'Torchvision', 'Python', 'Stable Diffusion', 'SAM', 'TensorBoard'],
         'achievements': [
             'Designed and implemented parameter-efficient adaptor modules to facilitate domain adaptation\
              in vision segmentation tasks, targeting real-world distribution shift.',
@@ -141,6 +141,31 @@ export const projects = [
              
         ],
     },
+    // {
+    //     'title':"",
+    //     'company': 'Politecnico di Torino',
+    //     'location': 'Turin, Italy',
+    //     'github': '',
+    //     'stack':[],
+    //     'achievements': [
+             
+    //     ],
+    // },
+
+]
+
+export const projects = [
+    {
+        'title':"",
+        'company': 'Politecnico di Torino',
+        'location': 'Turin, Italy',
+        'github': '',
+        'stack':[],
+        'achievements': [
+             
+        ],
+    },
+
     {
         'title':"",
         'company': 'Politecnico di Torino',

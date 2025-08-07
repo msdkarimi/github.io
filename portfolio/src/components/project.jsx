@@ -1,7 +1,9 @@
 import { Container, Grid, SimpleGrid, Skeleton } from '@mantine/core';
-import { Card, Title, Text, List, ThemeIcon, Badge, Stack, Group, Button, Flex } from '@mantine/core';
+import { Card, Title, Text, List, ThemeIcon, Badge, Stack, Group, Button, Flex, Divider } from '@mantine/core';
 import { IconRosetteDiscountCheckFilled, IconCode } from '@tabler/icons-react';
+import { MyDivider }  from './user';
 import classes from './css/UserInfoIcons.module.css'
+import React from 'react'
 
 export function Project(props) {
   const child = <Skeleton height={140} radius="md" animate={true} />;
@@ -34,8 +36,8 @@ export function ProjectCard(props) {
           <Title order={3} color='white'>{props.data.title}</Title>
           <Text size="md" fw={100}>{props.data.date}</Text>
         </Flex>
-        <Text size="sm" mt={-15} >
-           <Text size='md' fw={100} c='white'>at {props.data.company}, {props.data.location}</Text>
+        <Text size='md' fw={100} c='white' mt={-15} >
+           at {props.data.company}, {props.data.location}
         </Text>
         {props.data.github ? <Button mt={-10} size="xs" w={100} variant="default" leftSection={<IconCode size={18}/>} onClick={()=>handleClick(props.data.github)}>github</Button>:<></>}
 
@@ -45,7 +47,7 @@ export function ProjectCard(props) {
           spacing="md"
           size="md"
           
-          icon={<IconRosetteDiscountCheckFilled color='green' size={30}/>}
+          icon={<IconRosetteDiscountCheckFilled color='white' size={30}/>}
         >
           {props.data.achievements.map((value, index) => (
             <List.Item key={index} style={{ textAlign: 'justify' }} ><Text size='md' fw={200} c='white'>{value}</Text></List.Item>
@@ -59,5 +61,19 @@ export function ProjectCard(props) {
         </Group>
         
       </Stack>
+  );
+}
+
+
+export function ProjCol(props){
+
+  return(
+      <React.Fragment key={props.index}>
+          <Grid.Col>
+          {props.index == 0 && <MyDivider color={props.color} dividerName={props.dividerName}/>}
+              <Project data={props.data} />
+          </Grid.Col>
+      </React.Fragment>
+
   );
 }

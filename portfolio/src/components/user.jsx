@@ -1,8 +1,9 @@
 import { IconAt, IconPhoneCall, IconMapPin, IconMailFilled, IconCertificate } from '@tabler/icons-react';
-import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider } from '@mantine/core';
+import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider, Flex } from '@mantine/core';
 import classes from './css/UserInfoIcons.module.css'
 import pic from '../assets/pic.jpg';
 import React from 'react';
+import { dividerColor } from './cv'
 
 export function UserInfoIcons(props) {
     const child = <Skeleton radius="md" animate={true} />;
@@ -20,7 +21,7 @@ export function UserInfoIcons(props) {
         <Grid.Col span={{base: 12, sm: 9, md: 10  }} mt={20}>
             <Group>
                 <div>
-                <Text fz="xl" fw={300} className={`${classes.name}`}  c='white' tt='uppercase'>
+                <Text fz="xl" fw={300} className={classes.name}  c='white' tt='uppercase'>
                     {props.data.fullName}
                 </Text>
                 <Text fz="lg" tt="uppercase" fw={300} c='white'   >
@@ -77,7 +78,7 @@ export function Expertise(props){
     const rightColumn = props.skills.filter((_, i) => i % 3 === 2);
     return(
         <>
-            <Divider my="lg" label="Technical Skills" labelPosition="center" color='#F69E6E' mt={10} />
+            <MyDivider dividerName="Technical Skills" color={dividerColor}/>
             <Grid>
                 <Grid.Col  span={4} >
                     <SubExpertise data={leftColumn} />
@@ -130,14 +131,14 @@ function SubExpertise(props){
 export function Degree(props){
     return(
         <Paper mt={10}>
-            <Divider label="Education" labelPosition="center" color='#F69E6E'></Divider>
+            <MyDivider dividerName="Education" color={dividerColor} mb={10}/>
             <List listStyleType="None">
                 {props.data.map((degree, index)=>(
                     <React.Fragment key={index}>
                         {index !== 0 && <Divider my="sm" variant="dashed" />}
                         <List.Item>
                             <Group>
-                            <IconCertificate size={40}/>
+                            <IconCertificate color='white' size={40}/>
                                 <Stack >
                                     
                                     <Text size='xl' fw={400} c='white'>
@@ -173,7 +174,7 @@ export function LanguageReferee(props){
 export function Language(props){
     return (
         <List listStyleType="square">
-            <Divider label="Language" labelPosition="center" color='#F69E6E' mt={10}></Divider>
+            <MyDivider dividerName="Language" color={dividerColor}/>
                 {props.lang.map((lang, index)=>(
                         <React.Fragment key={index}>
                             {index !== 0 && <Divider my="sm" variant="dashed" />}
@@ -197,7 +198,7 @@ export function Language(props){
 export function Referee(props){
     return(
         <List listStyleType="square">
-        <Divider label="Referee" labelPosition="center" color='#F69E6E' mt={10}></Divider>
+        <MyDivider dividerName="Reference" color={dividerColor}/>
             {props.ref.map((ref, index)=>(
                     <React.Fragment key={index}>
                         {index !== 0 && <Divider my="sm" variant="dashed" />}
@@ -220,3 +221,16 @@ export function Referee(props){
 
     );
 }
+
+
+export function MyDivider(props) {
+    return (
+      <Flex align="center" w="100%" gap="sm" mt={10} mb={10}>
+        <Divider color={props.color} w="100%" />
+        <Text size="lg" fw={200} style={{ whiteSpace: 'nowrap' }}>
+          {props.dividerName}
+        </Text>
+        <Divider color={props.color} w="100%" />
+      </Flex>
+    );
+  }
