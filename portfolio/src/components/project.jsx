@@ -33,7 +33,7 @@ export function ProjectCard(props) {
         <Title order={3} color='white'>{props.data.title}</Title>
         
         <Text size="sm" mt={-15} >
-          at <strong>{props.data.company}, {props.data.location}</strong>
+           <Text size='md' fw={100} c='white'>at {props.data.company}, {props.data.location}</Text>
         </Text>
         {props.data.github ? <Button mt={-10} size="xs" w={100} variant="default" leftSection={<IconCode size={18}/>} onClick={()=>handleClick(props.data.github)}>github</Button>:<></>}
 
@@ -46,7 +46,7 @@ export function ProjectCard(props) {
           icon={<IconRosetteDiscountCheckFilled color='green' size={30}/>}
         >
           {props.data.achievements.map((value, index) => (
-            <List.Item key={index} style={{ textAlign: 'justify' }} >{value}</List.Item>
+            <List.Item key={index} style={{ textAlign: 'justify' }} ><Text size='md' fw={200} c='white'>{value}</Text></List.Item>
           ))}
         </List>
         <Text>Technology Stack:</Text>

@@ -115,6 +115,29 @@ export const projects = [
     },
 
     {
+        'title':"Graduate Researcher",
+        'company': 'Politecnico di Torino',
+        'location': 'Turin, Italy',
+        'github': '',
+        'stack':[],
+        'achievements': [
+            'Designed and implemented parameter-efficient adaptor modules to facilitate domain adaptation\
+             in vision segmentation tasks, targeting real-world distribution shift.',
+            'Leveraged powerful foundational segmentation models such as Segment Anything Model\
+             (SAM) and SEEM, integrating adaptors in a plug-and-play fashion to preserve generalization\
+              capabilities while enabling domain-specific learning.',
+            'Performed extensive ablation studies to identify optimal adaptor configurations\
+             and insertion points, analyzing trade-offs between parameter efficiency\
+              and task-specific performance across multiple domains.',
+            'Generated task-specific images and leveraged Stable Diffusion’s internal\
+             attention maps (cross-/self-attention) to extract prompt-guided class masks,\
+              enabling weakly supervised segmentation without fine-tuning.',
+
+
+             
+        ],
+    },
+    {
         'title':"",
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
@@ -123,7 +146,7 @@ export const projects = [
         'achievements': [
              
         ],
-    }
+    },
 
 ]
 

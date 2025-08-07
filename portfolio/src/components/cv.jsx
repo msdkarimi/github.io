@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { UserInfoIcons, Description, DegreeExpertise, Degree} from './user';
+import { UserInfoIcons, Description, Expertise, Degree, Language, Referee, LanguageReferee} from './user';
 import { Container, Grid, Divider } from '@mantine/core';
 import { Project } from './project';
 import classes from './css/UserInfoIcons.module.css'
@@ -14,26 +14,28 @@ export function CV() {
   return (
    <Container>
     
-    <Grid className={classes.dashed_box}>
+    <Grid>
         <Grid.Col><UserInfoIcons data={head_line} /></Grid.Col>   
         <Grid.Col><Degree data={degrees} /></Grid.Col>  
         <Grid.Col>
             <Divider label="Summary" labelPosition="center" color='#F69E6E' mb={5}/>
             <Description description={description}/>
-            <DegreeExpertise degrees={degrees} skills={technicalSkils} lang={languages} ref={referee}/>
+            <Expertise skills={technicalSkils}/>
             <Divider label="Work Experience" labelPosition="center" color='#F69E6E' mt={10}/>
             </Grid.Col>
 
 
-        {projects.map((value, index)=><Col data={value} key={index}/>)}
-        
+        {projects.map((value, index)=><ProjCol data={value} key={index}/>)}
+        <Grid.Col>
+            <LanguageReferee  lang={languages} ref={referee}/>
+        </Grid.Col>
     </Grid>
     
    </Container>
   );
 }
 
-function Col(props){
+function ProjCol(props){
 
     return(
         <Grid.Col >
