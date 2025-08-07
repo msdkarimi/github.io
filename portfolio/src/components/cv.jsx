@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { UserInfoIcons, Description, DegreeExpertise} from './user';
+import { UserInfoIcons, Description, DegreeExpertise, Degree} from './user';
 import { Container, Grid, Divider } from '@mantine/core';
 import { Project } from './project';
 import classes from './css/UserInfoIcons.module.css'
@@ -15,7 +15,8 @@ export function CV() {
    <Container>
     
     <Grid>
-        <Grid.Col><UserInfoIcons data={head_line} /></Grid.Col>    
+        <Grid.Col><UserInfoIcons data={head_line} /></Grid.Col>   
+        <Grid.Col><Degree data={degrees} /></Grid.Col>  
         <Grid.Col>
             <Divider label="Summary" labelPosition="center" color='#F69E6E' mb={5}/>
             <Description description={description}/>

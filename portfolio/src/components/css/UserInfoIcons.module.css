@@ -17,3 +17,14 @@
 .box_shadow {
   box-shadow: 0px 0px 10px rgba(77, 76, 76, 0.342);
 }
+
+
+.the_child {
+  width: 100%;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;     /* legacy fallback */
+  word-break: break-word;    /* extra safety */
+  box-sizing: border-box;
+}

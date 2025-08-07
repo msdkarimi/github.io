@@ -72,17 +72,20 @@ function SubDescription(props){
 }
 
 export function DegreeExpertise(props){
-    const leftColumn = props.skills.filter((_, i) => i % 2 === 0);
-    const rightColumn = props.skills.filter((_, i) => i % 2 === 1);
+    const leftColumn = props.skills.filter((_, i) => i % 3 === 0);
+    const midColumn = props.skills.filter((_, i) => i % 3 === 1);
+    const rightColumn = props.skills.filter((_, i) => i % 3 === 2);
     return(
         <>
-            <Divider label="Technical Skills" labelPosition="center" color='#F69E6E' mt={10}/>
-            <Grid className={classes.shadow} >
-                
-                <Grid.Col  span={6}>
+            <Divider my="lg" label="Technical Skills" labelPosition="center" color='#F69E6E' mt={10} />
+            <Grid>
+                <Grid.Col  span={4} >
                     <Expertise data={leftColumn} />
                 </Grid.Col>
-                <Grid.Col  span={6}>
+                <Grid.Col  span={4} >
+                    <Expertise data={midColumn} />
+                </Grid.Col>
+                <Grid.Col  span={4}>
                     <Expertise data={rightColumn} />
                 </Grid.Col>
                 {/* <Grid.Col span={{base: 12, sm: 6, md: 4}} >
@@ -96,9 +99,9 @@ export function DegreeExpertise(props){
 function Expertise(props){
     return(
         
-        <Paper mt={10}>
+        <Paper mt={10} >
             {/* <Text size="xl" fw={500}>:</Text> */}
-            <List withPadding listStyleType="square" >
+            <List listStyleType="square" className={classes.the_child}>
 
             {props.data.map((skill, index)=>(
                         <List.Item key={index} mt={15}>
@@ -106,17 +109,16 @@ function Expertise(props){
                                 <strong>{skill.title}</strong>
                             </Text>
                             <Stack>
-                                <List listStyleType="square"  icon={<Text>-</Text>}>
+                                <List listStyleType="circle" >
                                     {skill.sub.map((skill, index)=>(
-                                        <List.Item key={index}>
-                                            <Text fw={600}>
+                                        <List.Item key={index} mt={5}>
+                                            <Text>
                                                 {skill}
                                             </Text>
                                         </List.Item>
                                     ))}
                                 </List> 
                             </Stack>
-
                         </List.Item>
                     ))}
             </List>
@@ -125,7 +127,7 @@ function Expertise(props){
     );
 }
 
-function Degree(props){
+export function Degree(props){
     return(
         <Paper mt={10}>
             <Divider label="Education" labelPosition="center" color='#F69E6E'></Divider>
@@ -146,7 +148,7 @@ function Degree(props){
                     </React.Fragment>
                 ))}
             </List>
-            <List listStyleType="square">
+            {/* <List listStyleType="square">
             <Divider label="Language" labelPosition="center" color='#F69E6E' mt={10}></Divider>
                 {props.lang.map((lang, index)=>(
                         <React.Fragment key={index}>
@@ -164,8 +166,8 @@ function Degree(props){
                             </List.Item>
                         </React.Fragment>
                     ))}
-            </List>
-            <List listStyleType="square">
+            </List> */}
+            {/* <List listStyleType="square">
             <Divider label="Referee" labelPosition="center" color='#F69E6E' mt={10}></Divider>
                 {props.ref.map((ref, index)=>(
                         <React.Fragment key={index}>
@@ -185,7 +187,7 @@ function Degree(props){
                             </List.Item>
                         </React.Fragment>
                     ))}
-            </List>
+            </List> */}
         </Paper>
     );
 }
