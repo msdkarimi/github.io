@@ -99,12 +99,12 @@ export function DegreeExpertise(props){
 function Expertise(props){
     return(
         
-        <Paper mt={10} >
+        <Paper>
             {/* <Text size="xl" fw={500}>:</Text> */}
             <List listStyleType="square" className={classes.the_child}>
 
             {props.data.map((skill, index)=>(
-                        <List.Item key={index} mt={15}>
+                        <List.Item key={index} >
                             <Text fw={700}>
                                 <strong>{skill.title}</strong>
                             </Text>
