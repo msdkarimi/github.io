@@ -11,9 +11,9 @@ export const degrees = [
     {'degreeName' : 'M.Sc. in Computer Engineering - AI & Data Analytics',
      'degreeLocation' : 'at Politecnico di Torino, Italy'
     },
-    {'degreeName' : 'B.Sc. in Computer Engineering - Software Engineering',
-        'degreeLocation' : 'at Persian Gulf University, Iran'
-    },
+    // {'degreeName' : 'B.Sc. in Computer Engineering - Software Engineering',
+    //     'degreeLocation' : 'at Persian Gulf University, Iran'
+    // },
 
 ]
 
@@ -46,11 +46,11 @@ export const technicalSkils = [
         'sub':[
             'Synthetic Data Generation using Diffusion Models',
             'Out-of-Distribution (OOD) Detection',
-            'Semantic Segmentation (Supervised & Weakly Supervised)',
+            'Semantic Segmentation (Supervised, Weakly Supervised)',
+            'Explainable AI (XAI)',
+            'Curriculum learning',
             'Image Classification (multi-class, multi-label)',
             'Model Adaptation: Parameter-efficient fine-tuning (e.g., Adapters, LoRA)',
-            'Explainable AI (XAI)',
-            'Curriculum learning'
         ]
     },
     {
