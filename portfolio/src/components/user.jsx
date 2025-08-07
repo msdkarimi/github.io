@@ -1,4 +1,4 @@
-import { IconAt, IconPhoneCall, IconMapPin, IconMailFilled } from '@tabler/icons-react';
+import { IconAt, IconPhoneCall, IconMapPin, IconMailFilled, IconCertificate } from '@tabler/icons-react';
 import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider } from '@mantine/core';
 import classes from './css/UserInfoIcons.module.css'
 import pic from '../assets/pic.jpg';
@@ -20,20 +20,20 @@ export function UserInfoIcons(props) {
         <Grid.Col span={{base: 12, sm: 9, md: 10  }} mt={20}>
             <Group>
                 <div>
-                <Text fz="xl" fw={700} className={`${classes.name} ${classes.shadow_t}`}  c='white' tt='uppercase'>
+                <Text fz="xl" fw={700} className={`${classes.name}`}  c='white' tt='uppercase'>
                     {props.data.fullName}
                 </Text>
-                <Text fz="lg" tt="uppercase" fw={700} c='white' className={classes.shadow_t}  >
+                <Text fz="lg" tt="uppercase" fw={700} c='white'   >
                     {props.data.title}
                 </Text>
                 <Group wrap="nowrap" gap={10} mt={3}>
-                    <IconAt stroke={1.5} size={25} className={classes.icon } />
-                    <Text fz="lg" c="white" className={classes.shadow}>
+                    <IconAt stroke={1.5} size={25}/>
+                    <Text fz="lg" c="white" >
                     {props.data.email}
                     </Text>
                 </Group>
                 <Group wrap="nowrap" gap={10} mt={3}>
-                    <IconMapPin stroke={1.5} size={25} className={classes.icon} />
+                    <IconMapPin stroke={1.5} size={25}  />
                     <Text fz="lg" c="white" className={classes.shadow}>{props.data.location}</Text>
                 </Group>
                 </div>
@@ -131,19 +131,23 @@ export function Degree(props){
     return(
         <Paper mt={10}>
             <Divider label="Education" labelPosition="center" color='#F69E6E'></Divider>
-            <List listStyleType="square">
+            <List listStyleType="None">
                 {props.data.map((degree, index)=>(
                     <React.Fragment key={index}>
                         {index !== 0 && <Divider my="sm" variant="dashed" />}
                         <List.Item>
+                            <Group>
+                            <IconCertificate size={40}/>
                                 <Stack >
+                                    
                                     <Text size="xl" fw={500}>
                                         {degree.degreeName}
                                     </Text>
                                     <Text size="lg" c="gray.5" mt={-15} >
                                         {degree.degreeLocation}
                                     </Text>
-                                </Stack>  
+                                </Stack>
+                            </Group>
                         </List.Item>
                     </React.Fragment>
                 ))}

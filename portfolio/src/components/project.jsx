@@ -43,7 +43,7 @@ export function ProjectCard(props) {
           spacing="md"
           size="md"
           
-          icon={<IconRosetteDiscountCheckFilled color='green' size={30} />}
+          icon={<IconRosetteDiscountCheckFilled color='green' size={30}/>}
         >
           {props.data.achievements.map((value, index) => (
             <List.Item key={index} style={{ textAlign: 'justify' }} >{value}</List.Item>

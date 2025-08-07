@@ -14,7 +14,7 @@ export function CV() {
   return (
    <Container>
     
-    <Grid>
+    <Grid className={classes.dashed_box}>
         <Grid.Col><UserInfoIcons data={head_line} /></Grid.Col>   
         <Grid.Col><Degree data={degrees} /></Grid.Col>  
         <Grid.Col>
