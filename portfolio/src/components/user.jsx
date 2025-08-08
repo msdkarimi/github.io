@@ -1,5 +1,5 @@
 import { IconAt, IconPhoneCall, IconMapPin, IconMailFilled, IconCertificate } from '@tabler/icons-react';
-import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider, Flex, Title } from '@mantine/core';
+import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider, Flex, Title, Card } from '@mantine/core';
 import classes from './css/UserInfoIcons.module.css'
 import pic from '../assets/pic.jpg';
 import React from 'react';
@@ -90,6 +90,7 @@ export function Expertise(props){
                     <SubExpertise data={rightColumn}  />
                 </Grid.Col>
             </Grid>
+            
         </>
     );
 }
@@ -99,24 +100,24 @@ function SubExpertise(props){
         
         <Paper style={{ maxWidth: '100%' }}>
             <List listStyleType="square" className={classes.the_child}>
-            {props.data.map((skill, index)=>(
-                        <List.Item key={index} >
-                            <Title order={4} fw={600}>
-                                {skill.title}
-                            </Title>
-                            <Stack>
-                                <List listStyleType="circle" >
-                                    {skill.sub.map((skill, index)=>(
-                                        <List.Item key={index} mt={5}>
-                                            <Text size='md' fw={300} c='white'>
-                                                {skill}
-                                            </Text>
-                                        </List.Item>
-                                    ))}
-                                </List> 
-                            </Stack>
-                        </List.Item>
-                    ))}
+                {props.data.map((skill, index)=>(
+                    <List.Item key={index} >
+                        <Title order={4} fw={600}>
+                            {skill.title}
+                        </Title>
+                        <Stack>
+                            <List listStyleType="circle" >
+                                {skill.sub.map((skill, index)=>(
+                                    <List.Item key={index} mt={5}>
+                                        <Text size='md' fw={300} c='white'>
+                                            {skill}
+                                        </Text>
+                                    </List.Item>
+                                ))}
+                            </List> 
+                        </Stack>
+                    </List.Item>
+                ))}
             </List>
         </Paper>
 

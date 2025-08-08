@@ -10,11 +10,10 @@ export const block_margin = 10
 
 export function CV() {
     
-    
-
     useEffect(() => {
     document.title = 'Masoud Karimi - ML Engineer';
     }, []);
+
   return (
    <Container size='lg'>
     <Grid>
