@@ -57,7 +57,7 @@ export function ProjectCard(props) {
         <Text>Technology Stack:</Text>
         <Group gap='xs'>
             {
-                props.data.stack.map((value, index)=>(<Badge   size='lg' fw={300} styles={{ root: { textTransform: 'none',  color: 'white', } }} key={index} variant="light" color="teal" radius="md" >{value}</Badge>))
+                props.data.stack.map((value, index)=>(<Badge   size='xl' fw={300} styles={{ root: { textTransform: 'none',  color: 'white', } }} key={index} variant="light" color="teal" radius="md" >{value}</Badge>))
             }
         </Group>
         
