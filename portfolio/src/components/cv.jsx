@@ -5,7 +5,6 @@ import { Project, ProjCol } from './project';
 import classes from './css/UserInfoIcons.module.css'
 import {workExperiences, projects, description, head_line, degrees, technicalSkils, languages, referee} from '../assets/static_data'
 
-
 export const dividerColor = '#AF5A00'
 
 export function CV() {
@@ -17,7 +16,6 @@ export function CV() {
     }, []);
   return (
    <Container>
-    
     <Grid>
         <Grid.Col><UserInfoIcons data={head_line} /></Grid.Col>   
         <Grid.Col><Degree data={degrees} /></Grid.Col>  
@@ -34,7 +32,6 @@ export function CV() {
             <LanguageReferee  lang={languages} ref={referee}/>
         </Grid.Col>
     </Grid>
-    
    </Container>
   );
 }

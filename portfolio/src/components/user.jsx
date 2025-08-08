@@ -1,5 +1,5 @@
 import { IconAt, IconPhoneCall, IconMapPin, IconMailFilled, IconCertificate } from '@tabler/icons-react';
-import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider, Flex } from '@mantine/core';
+import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider, Flex, Title } from '@mantine/core';
 import classes from './css/UserInfoIcons.module.css'
 import pic from '../assets/pic.jpg';
 import React from 'react';
@@ -18,23 +18,23 @@ export function UserInfoIcons(props) {
                 />
             </Group>
         </Grid.Col>
-        <Grid.Col span={{base: 12, sm: 9, md: 10  }} mt={20}>
+        <Grid.Col span={{base: 12, sm: 9, md: 10  }} mt={5}>
             <Group>
                 <div>
-                <Text fz="xl" fw={300} className={classes.name}  c='white' tt='uppercase'>
+                <Title order={1} fw={100} className={classes.name}  c='white' tt='uppercase'>
                     {props.data.fullName}
-                </Text>
-                <Text fz="lg" tt="uppercase" fw={300} c='white'>
+                </Title>
+                <Title order={3} fw={100} tt="uppercase"  c='white'>
                     {props.data.title}
-                </Text>
+                </Title>
                 <Group wrap="nowrap" gap={10} mt={3}>
-                    <IconAt stroke={1.5} size={25}/>
+                    <IconAt stroke={1.} size={25}/>
                     <Text fz="lg" fw={200} c="white" >
                     {props.data.email}
                     </Text>
                 </Group>
                 <Group wrap="nowrap" gap={10} mt={3}>
-                    <IconMapPin stroke={1.5} size={25}  />
+                    <IconMapPin stroke={1.} size={25}  />
                     <Text fw={200} fz="lg" c="white" className={classes.shadow}>{props.data.location}</Text>
                 </Group>
                 </div>
@@ -66,7 +66,7 @@ function SubDescription(props){
     }
     
     return(
-        <Text mt={spacing} size='lg' fw={300} c='white' style={{ textAlign: 'justify' }}>
+        <Text mt={spacing} size='lg' fw={250} c='white' style={{ textAlign: 'justify' }}>
             {props.desc}
         </Text>
     );
@@ -138,15 +138,15 @@ export function Degree(props){
                         {index !== 0 && <Divider my="sm" variant="dashed" />}
                         <List.Item>
                             <Group>
-                            <IconCertificate color='white' size={40}/>
+                            <IconCertificate stroke={.5} color='white' size={40}/>
                                 <Stack >
                                     
-                                    <Text size='xl' fw={400} c='white'>
+                                    <Title order={3} fw={200} c='white'>
                                         {degree.degreeName}
-                                    </Text>
-                                    <Text size='md' fw={300} c='white' mt={-15} >
+                                    </Title>
+                                    <Title order={5} fw={100} c='white' mt={-15} >
                                         {degree.degreeLocation}
-                                    </Text>
+                                    </Title>
                                 </Stack>
                             </Group>
                         </List.Item>

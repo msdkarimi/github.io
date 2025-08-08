@@ -89,7 +89,7 @@ export const workExperiences = [
         'title':"Applied AI Researcher, DARE Project",
         'company': 'Politecnico di Torino',
         'location': 'Turin, Italy',
-        'date': 'Jun 2024 - Oct. 2025',
+        'date': 'Jun 2024 - Sep 2025',
         'github': [
             {'name':'Difussion model', 'link':'https://github.com/msdkarimi/pl_ldm'},
             {'name':'WSSS model', 'link':'https://github.com/msdkarimi/wsss'},
