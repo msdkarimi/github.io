@@ -15,7 +15,7 @@ export function CV() {
     document.title = 'Masoud Karimi - ML Engineer';
     }, []);
   return (
-   <Container>
+   <Container size='lg'>
     <Grid>
         <Grid.Col><UserInfoIcons data={head_line} /></Grid.Col>   
         <Grid.Col><Degree data={degrees} /></Grid.Col>  

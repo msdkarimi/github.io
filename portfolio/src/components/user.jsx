@@ -21,10 +21,10 @@ export function UserInfoIcons(props) {
         <Grid.Col span={{base: 12, sm: 9, md: 10  }} mt={5}>
             <Group>
                 <div>
-                <Title order={1} fw={100} className={classes.name}  c='white' tt='uppercase'>
+                <Title order={2} fw={100} className={classes.name}  c='white' tt='uppercase'>
                     {props.data.fullName}
                 </Title>
-                <Title order={3} fw={100} tt="uppercase"  c='white'>
+                <Title order={4} fw={100} tt="uppercase"  c='white'>
                     {props.data.title}
                 </Title>
                 <Group wrap="nowrap" gap={10} mt={3}>
@@ -101,14 +101,12 @@ function SubExpertise(props){
     return(
         
         <Paper>
-            {/* <Text size="xl" fw={500}>:</Text> */}
             <List listStyleType="square" className={classes.the_child}>
-
             {props.data.map((skill, index)=>(
                         <List.Item key={index} >
-                            <Text fw={700}>
-                                <strong>{skill.title}</strong>
-                            </Text>
+                            <Title order={4} fw={600}>
+                                {skill.title}
+                            </Title>
                             <Stack>
                                 <List listStyleType="circle" >
                                     {skill.sub.map((skill, index)=>(
@@ -138,13 +136,12 @@ export function Degree(props){
                         {index !== 0 && <Divider my="sm" variant="dashed" />}
                         <List.Item>
                             <Group>
-                            <IconCertificate stroke={.5} color='white' size={40}/>
+                            <IconCertificate stroke={.75} color='white' size={40}/>
                                 <Stack >
-                                    
-                                    <Title order={3} fw={200} c='white'>
+                                    <Title order={4} fw={200} c='white'>
                                         {degree.degreeName}
                                     </Title>
-                                    <Title order={5} fw={100} c='white' mt={-15} >
+                                    <Title order={6} fw={100} c='white' mt={-15} >
                                         {degree.degreeLocation}
                                     </Title>
                                 </Stack>

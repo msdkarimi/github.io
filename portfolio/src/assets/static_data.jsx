@@ -173,7 +173,7 @@ export const projects = [
         'location': '',
         'date': '',
         'github': [{'name':'Repository', 'link':'https://github.com/msdkarimi/automation_agents'}],
-        'stack':['Python', 'LangGraph', 'LangChain', 'Ollama', 'ReAct agent', 'Chain of Thought', 'Few-Shot Prompting', 'Tool Calling', 'React', 'fastAPI', 'JavaScript', 'SQLAlchemy', ],
+        'stack':['Python', 'LangGraph', 'LangChain', 'Ollama', 'LLM', 'ReAct agent', 'Chain of Thought', 'Few-Shot Prompting', 'Tool Calling', 'React', 'fastAPI', 'JavaScript', 'SQLAlchemy', ],
         'achievements': [
              "Developed an intelligent ticket resolution agent using LangGraph and LangChain,\
               designed with the ReAct (Reasoning and Acting) paradigm to enable advanced reasoning\

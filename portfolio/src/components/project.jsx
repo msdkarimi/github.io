@@ -44,9 +44,9 @@ export function ProjectCard(props) {
         <Group>
           {props.data.github.map((value, index)=>(
             <Tooltip key={index} arrowOffset={5} withArrow arrowRadius={1} color="red" position="left-start" offset={5} label='Link to source code'>
-            <Button key={index} mt={-10} size="xs" variant="default" leftSection={<IconBrandGithub size={18}/>} onClick={()=>handleClick(value.link)}>{value.name}</Button>
+            <Button key={index} mt={-10} size="xs" variant="default" leftSection={<IconBrandGithub stroke={1.5} />} onClick={()=>handleClick(value.link)}>{value.name}</Button>
             </Tooltip>
-          ))}
+          ))} 
         </Group>
         <Text fw={700}>Responsibilities and Achievements:</Text>
 
@@ -62,7 +62,7 @@ export function ProjectCard(props) {
         <Text>Technology Stack:</Text>
         <Group gap='xs'>
             {
-                props.data.stack.map((value, index)=>(<Badge size='lg' fw={300} styles={{ root: { textTransform: 'none' } }} key={index} variant="light" color="teal" radius="md" >{value}</Badge>))
+                props.data.stack.map((value, index)=>(<Badge   size='lg' fw={300} styles={{ root: { textTransform: 'none',  color: 'white', } }} key={index} variant="light" color="teal" radius="md" >{value}</Badge>))
             }
         </Group>
         
