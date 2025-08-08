@@ -103,6 +103,9 @@ export const workExperiences = [
                image–mask pairs with textual prompts. resulting in improved IoU scores across various object categories, with performance gains varying by class — reaching up to 10% in certain cases.',
             
             'Trained a supervised contrastive learning model for out-of-distribution (OOD) detection, reaching 92% F1 score, and used it to clean image pools, inorder to enhancing downstream task accuracy.',
+            'Designing data augmentation pipeline by leveraging semantic search within the embedding space of\
+             an OOD model to retrieve similar samples from unlabeled data, thereby expanding\
+              the training dataset for improved generative model performance.',
             'Used Explainable AI (XAI) for pseudo-mask generation in weakly supervised segmentation,\
              combining prototype learning and an affinity network to improve localization and segmentation accuracy. Leading to more reliable pseudo-labels and improved performance in low-annotation segmentation scenarios.',
             
