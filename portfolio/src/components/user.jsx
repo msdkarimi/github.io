@@ -90,37 +90,37 @@ export function Expertise(props){
                     <SubExpertise data={rightColumn}  />
                 </Grid.Col>
             </Grid>
-            
         </>
     );
 }
 
-function SubExpertise(props){
-    return(
-        
-        <Paper style={{ maxWidth: '100%' }}>
-            <List listStyleType="square" className={classes.the_child}>
-                {props.data.map((skill, index)=>(
-                    <List.Item key={index} >
-                        <Title order={4} fw={600}>
+function SubExpertise(props) {
+    return (
+        <Paper >
+            <List listStyleType="square">
+                {props.data.map((skill, index) => (
+                    <List.Item key={index}>
+                        <Title
+                            order={4}
+                            fw={600}
+                        >
                             {skill.title}
                         </Title>
                         <Stack>
-                            <List listStyleType="circle" >
-                                {skill.sub.map((skill, index)=>(
-                                    <List.Item key={index} mt={5}>
+                            <List listStyleType="circle">
+                                {skill.sub.map((subSkill, subIndex) => (
+                                    <List.Item key={subIndex} mt={5}>
                                         <Text size='md' fw={300} c='white'>
-                                            {skill}
+                                            {subSkill}
                                         </Text>
                                     </List.Item>
                                 ))}
-                            </List> 
+                            </List>
                         </Stack>
                     </List.Item>
                 ))}
             </List>
         </Paper>
-
     );
 }
 

@@ -67,7 +67,7 @@ export const technicalSkils = [
         'title': 'Frameworks | Tools',
         'sub': [
             'Python, C, Java, JavaScript, React',
-            'PyTorch, TensorFlow, Jax, LangGraph and LangChain',
+            'PyTorch, TensorFlow, Jax, LangGraph, LangChain',
             'Spark, Hadoop, Pandas, NumPy, Scikit-learn, Matplotlib',
             'PostgreSQL, SQLAlchemy (ORM), MongoDB, Node.js, fastAPI',
             'Linux, Bash, SLURM, HPC clusters'

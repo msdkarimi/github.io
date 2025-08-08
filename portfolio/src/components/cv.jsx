@@ -5,7 +5,7 @@ import { Project, ProjCol } from './project';
 import classes from './css/UserInfoIcons.module.css'
 import {workExperiences, projects, description, head_line, degrees, technicalSkils, languages, referee} from '../assets/static_data'
 
-export const dividerColor = '#AF5A00'
+export const dividerColor = '#af4600ab'
 export const block_margin = 10
 
 export function CV() {
