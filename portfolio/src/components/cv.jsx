@@ -6,6 +6,7 @@ import classes from './css/UserInfoIcons.module.css'
 import {workExperiences, projects, description, head_line, degrees, technicalSkils, languages, referee} from '../assets/static_data'
 
 export const dividerColor = '#AF5A00'
+export const block_margin = 10
 
 export function CV() {
     
@@ -17,8 +18,8 @@ export function CV() {
   return (
    <Container size='lg'>
     <Grid>
-        <Grid.Col><UserInfoIcons data={head_line} /></Grid.Col>   
-        <Grid.Col><Degree data={degrees} /></Grid.Col>  
+        <Grid.Col ml={block_margin} mr={block_margin}><UserInfoIcons data={head_line} /></Grid.Col>   
+        <Grid.Col ><Degree data={degrees} /></Grid.Col>  
         <Grid.Col>
             <MyDivider dividerName="Summary" color={dividerColor}/>
             <Description description={description}/>

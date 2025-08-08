@@ -4,12 +4,11 @@ import { IconRosetteDiscountCheckFilled, IconCode, IconBrandGithub } from '@tabl
 import { MyDivider }  from './user';
 import classes from './css/UserInfoIcons.module.css'
 import React from 'react'
+import { block_margin } from './cv'
 
 export function Project(props) {
-  const child = <Skeleton height={140} radius="md" animate={true} />;
-
   return (
-    <Card className={classes.box_shadow} padding="lg" radius="md">
+    <Card className={classes.box_shadow} padding="lg" radius="md" ml={block_margin} mr={block_margin}>
         <Grid>  
             <Grid.Col>
                 <ProjectCard data={props.data}/>
@@ -18,10 +17,6 @@ export function Project(props) {
     </Card>
   );
 }
-
-
-
-
 
 
 export function ProjectCard(props) {
@@ -75,10 +70,10 @@ export function ProjCol(props){
 
   return(
       <React.Fragment key={props.index}>
-          <Grid.Col>
-          {props.index == 0 && <MyDivider color={props.color} dividerName={props.dividerName}/>}
-              <Project data={props.data} />
-          </Grid.Col>
+        <Grid.Col>
+        {props.index == 0 && <MyDivider color={props.color} dividerName={props.dividerName}/>}
+            <Project data={props.data}/>
+        </Grid.Col>
       </React.Fragment>
 
   );

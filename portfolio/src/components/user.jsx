@@ -3,7 +3,7 @@ import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider, Flex,
 import classes from './css/UserInfoIcons.module.css'
 import pic from '../assets/pic.jpg';
 import React from 'react';
-import { dividerColor } from './cv'
+import { dividerColor, block_margin } from './cv'
 
 export function UserInfoIcons(props) {
     const child = <Skeleton radius="md" animate={true} />;
@@ -47,7 +47,7 @@ export function UserInfoIcons(props) {
 
 export function Description(props){
     return(
-        <Grid >
+        <Grid pl={block_margin} pr={block_margin}>
             <Grid.Col >
                 {
                     props.description.map((desc, index)=>
@@ -79,19 +79,16 @@ export function Expertise(props){
     return(
         <>
             <MyDivider dividerName="Technical Skills" color={dividerColor}/>
-            <Grid>
-                <Grid.Col  span={4} >
-                    <SubExpertise data={leftColumn} />
+            <Grid ml={block_margin} mr={block_margin}>
+                <Grid.Col  span={4}  >
+                    <SubExpertise data={leftColumn}   />
                 </Grid.Col>
                 <Grid.Col  span={4} >
                     <SubExpertise data={midColumn} />
                 </Grid.Col>
                 <Grid.Col  span={4}>
-                    <SubExpertise data={rightColumn} />
+                    <SubExpertise data={rightColumn}  />
                 </Grid.Col>
-                {/* <Grid.Col span={{base: 12, sm: 6, md: 4}} >
-                    <Degree data={props.degrees} lang={props.lang} ref={props.ref}/>  
-                </Grid.Col> */}
             </Grid>
         </>
     );
@@ -100,7 +97,7 @@ export function Expertise(props){
 function SubExpertise(props){
     return(
         
-        <Paper>
+        <Paper style={{ maxWidth: '100%' }}>
             <List listStyleType="square" className={classes.the_child}>
             {props.data.map((skill, index)=>(
                         <List.Item key={index} >
@@ -128,9 +125,9 @@ function SubExpertise(props){
 
 export function Degree(props){
     return(
-        <Paper mt={10}>
+        <Paper mt={10} >
             <MyDivider dividerName="Education" color={dividerColor} mb={10}/>
-            <List listStyleType="None">
+            <List listStyleType="None" pl={15} pr={15}>
                 {props.data.map((degree, index)=>(
                     <React.Fragment key={index}>
                         {index !== 0 && <Divider my="sm" variant="dashed" />}
@@ -156,7 +153,7 @@ export function Degree(props){
 
 export function LanguageReferee(props){
     return(
-        <Grid>
+        <Grid >
             <Grid.Col span={{ base: 12, sm: 6, md: 6 }}>
                 <Language lang={props.lang}/>
             </Grid.Col>
@@ -170,12 +167,12 @@ export function LanguageReferee(props){
 
 export function Language(props){
     return (
-        <List listStyleType="square">
+        <List listStyleType="square" >
             <MyDivider dividerName="Language" color={dividerColor}/>
                 {props.lang.map((lang, index)=>(
                         <React.Fragment key={index}>
                             {index !== 0 && <Divider my="sm" variant="dashed" />}
-                            <List.Item>
+                            <List.Item ml={block_margin} mr={block_margin}>
                                     <Group >
                                         <Text size="xl" fw={500}>
                                             {lang.language} 
@@ -199,7 +196,7 @@ export function Referee(props){
             {props.ref.map((ref, index)=>(
                     <React.Fragment key={index}>
                         {index !== 0 && <Divider my="sm" variant="dashed" />}
-                        <List.Item>
+                        <List.Item ml={block_margin} mr={block_margin}>
                             <Stack>
                                     <Text size="xl" fw={500}>
                                         {ref.name} 
@@ -224,7 +221,7 @@ export function MyDivider(props) {
     return (
       <Flex align="center" w="100%" gap="sm" mt={10} mb={10}>
         <Divider color={props.color} w="100%" />
-        <Text size="lg" fw={200} style={{ whiteSpace: 'nowrap' }}>
+        <Text size="lg" fw={400} style={{ whiteSpace: 'nowrap' }}>
           {props.dividerName}
         </Text>
         <Divider color={props.color} w="100%" />
