@@ -25,13 +25,14 @@ export function CV() {
         <Grid.Col>
             <MyDivider dividerName="Summary" color={dividerColor}/>
             <Description description={description}/>
-            <Expertise skills={technicalSkils}/>
-            
-            </Grid.Col>
+            <Expertise skills={technicalSkils}/>    
+        </Grid.Col>
 
         {workExperiences.map((value, index)=><ProjCol data={value} key={index} index={index} color={dividerColor} dividerName={'Work Experience'}/>)}        
         {projects.map((value, index)=><ProjCol data={value} key={index} index={index} color={dividerColor} dividerName={'Projects'} />)}
-        <Grid.Col><Degree data={degrees}/></Grid.Col>
+        <Grid.Col>
+            <Degree data={degrees}/>
+        </Grid.Col>
         <Grid.Col>
             <LanguageReferee  lang={languages} ref={referee}/>
         </Grid.Col>

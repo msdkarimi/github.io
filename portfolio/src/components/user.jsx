@@ -80,13 +80,13 @@ export function Expertise(props){
         <>
             <MyDivider dividerName="Technical Skills" color={dividerColor}/>
             <Grid ml={block_margin} mr={block_margin}>
-                <Grid.Col  span={4}  >
+                <Grid.Col  span={4} sx={{ minWidth: 0 }} >
                     <SubExpertise data={leftColumn}   />
                 </Grid.Col>
-                <Grid.Col  span={4} >
+                <Grid.Col  span={4} sx={{ minWidth: 0 }} >
                     <SubExpertise data={midColumn} />
                 </Grid.Col>
-                <Grid.Col  span={4}>
+                <Grid.Col  span={4} sx={{ minWidth: 0 }} >
                     <SubExpertise data={rightColumn}  />
                 </Grid.Col>
             </Grid>
@@ -96,23 +96,31 @@ export function Expertise(props){
 
 function SubExpertise(props) {
     return (
-        <Paper >
+        
+        <Flex style={{ width: '100%' }} justify="flex-start" align="center">
             <List listStyleType="square">
                 {props.data.map((skill, index) => (
                     <List.Item key={index}>
                         <Title
                             order={4}
                             fw={600}
+                            sx={{ whiteSpace: 'normal', minWidth: 0 }}
                         >
                             {skill.title}
                         </Title>
                         <Stack>
                             <List listStyleType="circle">
                                 {skill.sub.map((subSkill, subIndex) => (
-                                    <List.Item key={subIndex} mt={5}>
-                                        <Text size='md' fw={300}>
-                                            {subSkill}
-                                        </Text>
+                                    <List.Item key={subIndex} mt={5} sx={{ display: 'block', width: '100%',  minWidth: 0, }} >
+                                        <Flex align="center"   justify="center">
+                                            <Text size='md' fw={300} sx={{
+                                                                            wordBreak: 'break-word',         // prefer breaking at word boundaries
+                                                                            overflowWrap: 'break-word',  // break long tokens if absolutely necessary
+                                                                            hyphens: 'auto',             // allow hyphenation where supported
+                                                                        }}>
+                                                {subSkill}
+                                            </Text>
+                                        </Flex>
                                     </List.Item>
                                 ))}
                             </List>
@@ -120,7 +128,7 @@ function SubExpertise(props) {
                     </List.Item>
                 ))}
             </List>
-        </Paper>
+        </Flex>
     );
 }
 
