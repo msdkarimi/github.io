@@ -5,10 +5,8 @@ import { MantineProvider } from '@mantine/core';
 
 export default function App() {
   return (
-  <MantineProvider defaultColorScheme="dark">
+  <MantineProvider defaultColorScheme="auto">
     <CV/>
   </MantineProvider>
   )
 }
-
-

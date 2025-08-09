@@ -1,4 +1,5 @@
 
+export const tabTitle = 'Masoud Karimi - ML Engineer'
 export const head_line = {
      'fullName' : 'Masoud Karimi',
      'title' : 'Applied AI Engineer (Computer Vision & Agentic Systems)',
@@ -9,10 +10,12 @@ export const head_line = {
 
 export const degrees = [
     {'degreeName' : 'M.Sc. in Computer Engineering - AI & Data Analytics',
-     'degreeLocation' : 'at Politecnico di Torino, Italy'
+     'degreeLocation' : 'at Politecnico di Torino, Italy',
+     'date': '2021-2024'
     },
     {'degreeName' : 'B.Sc. in Computer Engineering - Software Engineering',
-        'degreeLocation' : 'at Persian Gulf University, Iran'
+        'degreeLocation' : 'at Persian Gulf University, Iran',
+        'date': '2012-2016'
     },
 
 ]
@@ -76,13 +79,15 @@ export const technicalSkils = [
 ]
 
 export const description = [
-    "Applied AI Researcher specializing in generative vision models, prompt-based image synthesis,\
-     and segmentation. Experienced in generating semantic masks from model's internal representation (attention modules), creating synthetic datasets,\
-      and using VLMs for captioning. Skilled in OOD detection, weakly supervised segmentation, and domain adaptation\
-       via efficient fine-tuning. Applied curriculum learning and custom sampling to address class imbalance in classification.",
-    "Developed privacy-preserving, stateful autonomous agents with LangGraph/LangChain and Ollama, featuring tool-calling, long-term memory,\
-     chain-of-thought reasoning, and full-stack deployment.",
-]
+        "Applied AI Researcher experienced in training and fine-tuning deep learning models, specializing in generative vision,\
+         prompt-based image synthesis, and segmentation. Proven expertise in generating semantic masks from model's internal\
+          representation (attention modules), creating synthetic datasets, and leveraging prompt engineering with\
+           Vision-Language Models (VLMs) to enrich image datasets. Skilled in OOD detection, weakly supervised segmentation,\
+            and domain adaptation via efficient fine-tuning. Applied curriculum learning and custom sampling to address class\
+             imbalance in classification.",
+        "Developed privacy-preserving, stateful autonomous agents with LangGraph/LangChain and Ollama,\
+         featuring tool-calling, long-term memory, chain-of-thought reasoning, and full-stack deployment.",
+    ]
 
 export const workExperiences = [
     {
@@ -95,7 +100,7 @@ export const workExperiences = [
             {'name':'WSSS model', 'link':'https://github.com/msdkarimi/wsss'},
             {'name':'OOD model', 'link':'https://github.com/msdkarimi/clean_pipeline'}
         ],
-        'stack':['PyTorch', 'Torchvision', 'Python', 'VLM(Gemma-3)', 'DDPM', 'DDIM', 'VAE', 'OpenCV', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Grad-CAM',  'W&B','Spark', 'HPC', 'Multi-GPU programming', 'Mixed-precision modeling', 'Gradient checkpointing'],
+        'stack':['PyTorch', 'Torchvision', 'Python', 'VLM(Gemma-3)', 'DDPM', 'DDIM', 'VAE', 'OpenCV', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Grad-CAM', 'Conditional Random Fields (CRFs)', 'W&B','Spark', 'HPC', 'Multi-GPU programming', 'Mixed-precision modeling', 'Gradient checkpointing'],
         'achievements': [
             'Developed a prompt-driven high resolution synthetic image–mask dataset by training a guided latent diffusion model\
              combining a Variational Autoencoder (VAE) with a Denoising Diffusion Probabilistic Model (DDPM).\

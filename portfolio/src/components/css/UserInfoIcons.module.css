@@ -38,3 +38,7 @@
   word-break: break-word;    /* extra safety */
   box-sizing: border-box;
 }
+
+.custom_bg {
+  background-color: #3498db;
+}

@@ -28,11 +28,11 @@ export function ProjectCard(props) {
     
       <Stack spacing="xs" >
         <Flex justify="space-between" w="100%">
-          <Title order={2} fw={250} color='white'>{props.data.title}</Title>
+          <Title order={2} fw={250} >{props.data.title}</Title>
           <Text size="lg" fw={50}>{props.data.date}</Text>
         </Flex>
         {props.data.company && props.data.location?
-          <Text size='md' fw={100} c='white' mt={-15} >
+          <Text size='md' fw={100}  mt={-15} >
            at {props.data.company}, {props.data.location}
           </Text>:<></>
         }
@@ -48,16 +48,16 @@ export function ProjectCard(props) {
         <List
           spacing="md"
           size="md"
-          icon={<IconRosetteDiscountCheckFilled color='white' stroke={0.5} size={30}/>}
+          icon={<IconRosetteDiscountCheckFilled  stroke={0.5} size={30}/>}
         >
           {props.data.achievements.map((value, index) => (
-            <List.Item key={index} style={{ textAlign: 'justify' }} ><Text size='md' fw={200} c='white'>{value}</Text></List.Item>
+            <List.Item key={index} style={{ textAlign: 'justify' }} ><Text size='lg' fw={200}>{value}</Text></List.Item>
           ))}
         </List>
-        <Text>Technology Stack:</Text>
+        <Text fw={700}>Technology Stack:</Text>
         <Group gap='xs'>
             {
-                props.data.stack.map((value, index)=>(<Badge   size='xl' fw={300} styles={{ root: { textTransform: 'none',  color: 'white', } }} key={index} variant="light" color="teal" radius="md" >{value}</Badge>))
+                props.data.stack.map((value, index)=>(<Badge   size='xl' fw={300} styles={{ root: { textTransform: 'none', } }} key={index} variant="light" color="blue" radius="md" >{value}</Badge>))
             }
         </Group>
         

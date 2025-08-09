@@ -3,7 +3,7 @@ import { Avatar, Group, Text, Grid, Skeleton, Paper, Stack, List, Divider, Flex,
 import classes from './css/UserInfoIcons.module.css'
 import pic from '../assets/pic.jpg';
 import React from 'react';
-import { dividerColor, block_margin } from './cv'
+import { dividerColor, block_margin, margin_below_divider, margin_top_divider } from './cv'
 
 export function UserInfoIcons(props) {
     const child = <Skeleton radius="md" animate={true} />;
@@ -21,21 +21,21 @@ export function UserInfoIcons(props) {
         <Grid.Col span={{base: 12, sm: 9, md: 10  }} mt={5}>
             <Group>
                 <div>
-                <Title order={2} fw={100} className={classes.name}  c='white' tt='uppercase'>
+                <Title order={2} fw={100} className={classes.name} tt='uppercase'>
                     {props.data.fullName}
                 </Title>
-                <Title order={4} fw={100} tt="uppercase"  c='white'>
+                <Title order={4} fw={100} tt="uppercase" >
                     {props.data.title}
                 </Title>
                 <Group wrap="nowrap" gap={10} mt={3}>
                     <IconAt stroke={1.} size={25}/>
-                    <Text fz="lg" fw={200} c="white" >
+                    <Text fz="lg" fw={200} >
                     {props.data.email}
                     </Text>
                 </Group>
                 <Group wrap="nowrap" gap={10} mt={3}>
                     <IconMapPin stroke={1.} size={25}  />
-                    <Text fw={200} fz="lg" c="white" className={classes.shadow}>{props.data.location}</Text>
+                    <Text fw={200} fz="lg" className={classes.shadow}>{props.data.location}</Text>
                 </Group>
                 </div>
             </Group>
@@ -66,7 +66,7 @@ function SubDescription(props){
     }
     
     return(
-        <Text mt={spacing} size='lg' fw={250} c='white' style={{ textAlign: 'justify' }}>
+        <Text mt={spacing} size='lg' fw={250} style={{ textAlign: 'justify' }}>
             {props.desc}
         </Text>
     );
@@ -110,7 +110,7 @@ function SubExpertise(props) {
                             <List listStyleType="circle">
                                 {skill.sub.map((subSkill, subIndex) => (
                                     <List.Item key={subIndex} mt={5}>
-                                        <Text size='md' fw={300} c='white'>
+                                        <Text size='md' fw={300}>
                                             {subSkill}
                                         </Text>
                                     </List.Item>
@@ -126,28 +126,31 @@ function SubExpertise(props) {
 
 export function Degree(props){
     return(
-        <Paper mt={10} >
-            <MyDivider dividerName="Education" color={dividerColor} mb={10}/>
-            <List listStyleType="None" pl={15} pr={15}>
-                {props.data.map((degree, index)=>(
+        <Paper>
+            <MyDivider dividerName="Education" color={dividerColor}/>
+            <Stack>
+                {props.data.map((degree, index) => (
                     <React.Fragment key={index}>
-                        {index !== 0 && <Divider my="sm" variant="dashed" />}
-                        <List.Item>
-                            <Group>
-                            <IconCertificate stroke={.75} color='white' size={40}/>
-                                <Stack >
-                                    <Title order={4} fw={200} c='white'>
+                    {index !== 0 && <Divider variant="dashed"/>}
+                        <Group wrap="nowrap" w="100%">
+                            <IconCertificate stroke={0.75} size={40} />
+                            <Stack gap={0} style={{ flex: 1 }}>
+                                <Flex justify="space-between" w="100%">
+                                    <Title order={4} fw={300}>
                                         {degree.degreeName}
                                     </Title>
-                                    <Title order={6} fw={100} c='white' mt={-15} >
-                                        {degree.degreeLocation}
-                                    </Title>
-                                </Stack>
-                            </Group>
-                        </List.Item>
+                                    <Text size="lg" fw={50}>
+                                        {degree.date}
+                                    </Text>
+                                </Flex>
+                                <Title order={6} fw={300}>
+                                {degree.degreeLocation}
+                                </Title>
+                            </Stack>
+                        </Group>
                     </React.Fragment>
                 ))}
-            </List>
+            </Stack>
         </Paper>
     );
 }
@@ -220,12 +223,12 @@ export function Referee(props){
 
 export function MyDivider(props) {
     return (
-      <Flex align="center" w="100%" gap="sm" mt={10} mb={10}>
-        <Divider color={props.color} w="100%" />
-        <Text size="lg" fw={400} style={{ whiteSpace: 'nowrap' }}>
+      <Flex align="center" w="100%" gap="sm" mt={margin_top_divider} mb={margin_below_divider}>
+        <Divider color={props.color} w="100%" size={1.0}/>
+        <Text size="lg" fw={350} style={{ whiteSpace: 'nowrap' }}>
           {props.dividerName}
         </Text>
-        <Divider color={props.color} w="100%" />
+        <Divider color={props.color} w="100%" size={1.0} />
       </Flex>
     );
   }
