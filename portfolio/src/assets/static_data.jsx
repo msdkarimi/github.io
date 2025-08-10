@@ -1,5 +1,6 @@
 
 export const tabTitle = 'Masoud Karimi - ML Engineer'
+
 export const head_line = {
      'fullName' : 'Masoud Karimi',
      'title' : 'Applied AI Engineer (Computer Vision & Agentic Systems)',
@@ -73,20 +74,19 @@ export const technicalSkils = [
             'PyTorch, TensorFlow, Jax, LangGraph, LangChain',
             'Spark, Hadoop, Pandas, NumPy, Scikit-learn, Matplotlib',
             'PostgreSQL, SQLAlchemy (ORM), MongoDB, Node.js, fastAPI',
-            'Linux, Bash, SLURM, HPC clusters'
+            'Linux, Bash, SLURM, HPC clusters, Docker, Kubernetes'
         ]
     }
 ]
 
 export const description = [
-        "Applied AI Researcher experienced in training and fine-tuning deep learning models, specializing in generative vision,\
-         prompt-based image synthesis, and segmentation. Proven expertise in generating semantic masks from model's internal\
-          representation (attention modules), creating synthetic datasets, and leveraging prompt engineering with\
-           Vision-Language Models (VLMs) to enrich image datasets. Skilled in OOD detection, weakly supervised segmentation,\
-            and domain adaptation via efficient fine-tuning. Applied curriculum learning and custom sampling to address class\
-             imbalance in classification.",
-        "Developed privacy-preserving, stateful autonomous agents with LangGraph/LangChain and Ollama,\
-         featuring tool-calling, long-term memory, chain-of-thought reasoning, and full-stack deployment.",
+        "Expert in designing and fine-tuning deep learning models for generative vision, segmentation, and vision-language\
+         tasks. Proficient in leveraging attention mechanisms to create semantic masks, generating synthetic datasets,\
+          and using prompt engineering. Skilled in boosting model robustness via OOD detection, weak supervision, domain\
+           adaptation, and curriculum learning to address class imbalance.",
+        "Builds privacy-preserving, stateful autonomous AI agents with LangGraph/LangChain and Ollama, featuring tool-calling,\
+         long-term memory, and reasoning. Experienced in full-stack deployment of scalable, production-ready intelligent\
+          systems.",
     ]
 
 export const workExperiences = [
