@@ -179,7 +179,7 @@ export const projects = [
         'location': '',
         'date': '',
         'github': [{'name':'Repository', 'link':'https://github.com/msdkarimi/automation_agents'}],
-        'stack':['Python', 'LangGraph', 'LangChain', 'Ollama', 'LLM', 'ReAct agent', 'RAG', 'FAISS', 'Chain of Thought', 'Few-Shot Prompting', 'Tool Calling', 'React', 'fastAPI', 'RESTful APIs', 'JavaScript', 'SQLAlchemy(ORM)', ],
+        'stack':['Python', 'LangGraph', 'LangChain', 'Ollama', 'LLM', 'ReAct agent', 'RAG', 'FAISS', 'Chain of Thought', 'Few-Shot Prompting', 'Tool Calling', 'React', 'fastAPI', 'RESTful APIs', 'Redis', 'JavaScript', 'SQLAlchemy(ORM)', ],
         'achievements': [
              "Developed an intelligent ticket resolution agent using LangGraph and LangChain,\
               designed with the ReAct (Reasoning and Acting) paradigm to enable advanced reasoning\
@@ -191,6 +191,7 @@ export const projects = [
             "Employed Chain of Thought prompting and Few-Shot examples to enhance reasoning\
              accuracy and improve task-specific performance.",
             "Used Ollama to run the language model locally, ensuring data privacy and secure processing.",
+            "Integrated Redis for high-performance caching and real-time data storage",
             "Built a React.js-based frontend leveraging React hooks for efficient state management\
              and dynamic visualization of agent responses to enhance user interaction.",
             "Developed a FastAPI backend exposing RESTful API endpoints for seamless integration with the frontend and\
