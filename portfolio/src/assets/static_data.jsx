@@ -1,5 +1,5 @@
 
-export const tabTitle = 'Masoud Karimi - ML Engineer'
+export const tabTitle = 'Masoud Karimi - Applied AI Engineer'
 
 export const head_line = {
      'fullName' : 'Masoud Karimi',
@@ -60,8 +60,9 @@ export const technicalSkils = [
     {
         'title': 'Agentic AI & Autonomous Systems',
         'sub': [
+            'ReAct-based agents with tool-calling',
+            'Retrieval-Augmented Generation (RAG)',
             'Stateful agents with episodic and instructional memory for long-term context retention',
-            'ReAct-based agents with tool-calling capabilities',
             'Chain-of-Thought and few-shot prompting.',
             'Deployed LLMs locally via Ollama',
         ]
@@ -72,8 +73,8 @@ export const technicalSkils = [
         'sub': [
             'Python, C, Java, JavaScript, React',
             'PyTorch, TensorFlow, Jax, LangGraph, LangChain',
-            'Spark, Hadoop, Pandas, NumPy, Scikit-learn, Matplotlib',
-            'PostgreSQL, SQLAlchemy (ORM), MongoDB, Node.js, fastAPI',
+            'Spark, Hadoop, Pandas, NumPy, Scikit-learn, Matplotlib, seaborn',
+            'PostgreSQL, SQLAlchemy (ORM), MongoDB, Node.js, fastAPI, RESTful APIs', ,
             'Linux, Bash, SLURM, HPC clusters, Docker, Kubernetes'
         ]
     }
@@ -84,9 +85,12 @@ export const description = [
          tasks. Proficient in leveraging attention mechanisms to create semantic masks, generating synthetic datasets,\
           and using prompt engineering. Skilled in boosting model robustness via OOD detection, weak supervision, domain\
            adaptation, and curriculum learning to address class imbalance.",
-        "Builds privacy-preserving, stateful autonomous AI agents with LangGraph/LangChain and Ollama, featuring tool-calling,\
-         long-term memory, and reasoning. Experienced in full-stack deployment of scalable, production-ready intelligent\
-          systems.",
+        "Designed and deployed advanced autonomous AI agents with stateful, reasoning-based orchestration, dynamic tool-calling,\
+         contextual retrieval, and memory-enhanced interactions, supported by scalable full-stack development for seamless\
+          user experience."
+        // "Builds privacy-preserving, stateful autonomous AI agents with LangGraph/LangChain and Ollama, featuring tool-calling,\
+        //  long-term memory, and reasoning. Experienced in full-stack deployment of scalable, production-ready intelligent\
+        //   systems.",
     ]
 
 export const workExperiences = [
@@ -152,9 +156,6 @@ export const workExperiences = [
             'Generated task-specific images and leveraged Stable Diffusion’s internal\
              attention maps (cross-/self-attention) to extract prompt-guided class masks,\
               enabling weakly supervised segmentation without fine-tuning.',
-
-
-             
         ],
     },
     // {
@@ -173,16 +174,18 @@ export const workExperiences = [
 
 export const projects = [
     {
-        'title':"Intelligent Ticket Resolution Agent with Tool Calling (ReAct-based)",
+        'title':"ReAct and RAG-based Intelligent Ticket Resolution Agent with Tool Calling",
         'company': '',
         'location': '',
         'date': '',
         'github': [{'name':'Repository', 'link':'https://github.com/msdkarimi/automation_agents'}],
-        'stack':['Python', 'LangGraph', 'LangChain', 'Ollama', 'LLM', 'ReAct agent', 'Chain of Thought', 'Few-Shot Prompting', 'Tool Calling', 'React', 'fastAPI', 'JavaScript', 'SQLAlchemy', ],
+        'stack':['Python', 'LangGraph', 'LangChain', 'Ollama', 'LLM', 'ReAct agent', 'RAG', 'FAISS', 'Chain of Thought', 'Few-Shot Prompting', 'Tool Calling', 'React', 'fastAPI', 'RESTful APIs', 'JavaScript', 'SQLAlchemy(ORM)', ],
         'achievements': [
              "Developed an intelligent ticket resolution agent using LangGraph and LangChain,\
               designed with the ReAct (Reasoning and Acting) paradigm to enable advanced reasoning\
                and dynamic tool-calling capabilities.",
+            "Integrated Retrieval-Augmented Generation (RAG) to enable the agent to pull relevant contextual data from a knowledge\
+             base, improving accuracy and reducing hallucinations.",
             "Implemented both episodic and instructional memory using custom memory components for\
              better contextual understanding and continuity.",
             "Employed Chain of Thought prompting and Few-Shot examples to enhance reasoning\
@@ -190,7 +193,8 @@ export const projects = [
             "Used Ollama to run the language model locally, ensuring data privacy and secure processing.",
             "Built a React.js-based frontend leveraging React hooks for efficient state management\
              and dynamic visualization of agent responses to enhance user interaction.",
-            "Developed the backend using FastAPI, ensuring high performance and easy API integration.",
+            "Developed a FastAPI backend exposing RESTful API endpoints for seamless integration with the frontend and\
+             third-party systems.",
             "Utilized PostgreSQL as the primary database, with SQLAlchemy ORM for efficient and structured database interactions.",
         ],
     },
