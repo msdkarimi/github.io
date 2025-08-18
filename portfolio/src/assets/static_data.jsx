@@ -81,10 +81,11 @@ export const technicalSkils = [
 ]
 
 export const description = [
-        "Expert in designing and fine-tuning deep learning models for generative vision, segmentation, and vision-language\
-         tasks. Proficient in leveraging attention mechanisms to create semantic masks, generating synthetic datasets,\
-          and using prompt engineering. Skilled in boosting model robustness via OOD detection, weak supervision, domain\
-           adaptation, and curriculum learning to address class imbalance.",
+        "Holds a Master’s degree in AI and Data Analytics, with expertise in training and fine-tuning deep learning models for generative\
+            vision, semantic segmentation, and vision-language tasks. Experienced in utilizing attention-based approaches\
+            toimprove modelinterpretabilityandperformance, generating synthetic datasets, and using prompt engineering. Skilled\
+            in boosting downstreamtasks via Out-of-Distribution (OOD) detection,weak semantic supervision, domain adaptation,\
+            and curriculum learning to address class imbalance.",
         "Designed and deployed advanced autonomous AI agents with stateful, reasoning-based orchestration, dynamic tool-calling,\
          contextual retrieval, and memory-enhanced interactions, supported by scalable full-stack development for seamless\
           user experience."
